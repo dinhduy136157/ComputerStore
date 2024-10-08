@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\computerstore\\computerstore\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\computerstore\\computerstore\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\computerstore\\computerstore\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\computerstore\\computerstore\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\computerstore\\computerstore\\views\\demo\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\views\\demo\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\computerstore\\computerstore\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\computerstore\\computerstore\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\computerstore\\computerstore\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\computerstore\\computerstore\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\.gitignore",
+              "RelativeDocumentMoniker": "ComputerStore\\.gitignore",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\.gitignore",
+              "RelativeToolTip": "ComputerStore\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-08T10:09:46.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\Views\\Web.config",
+              "RelativeDocumentMoniker": "ComputerStore\\Views\\Web.config",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\Views\\Web.config",
+              "RelativeToolTip": "ComputerStore\\Views\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-08T10:04:04.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\Views\\Demo\\Details.cshtml",
+              "RelativeDocumentMoniker": "ComputerStore\\Views\\Demo\\Details.cshtml",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\Views\\Demo\\Details.cshtml",
+              "RelativeToolTip": "ComputerStore\\Views\\Demo\\Details.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-08T09:53:18.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DemoController.cs",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\Controllers\\DemoController.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\Controllers\\DemoController.cs",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\Controllers\\DemoController.cs",
+              "RelativeToolTip": "ComputerStore\\Controllers\\DemoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:52:54.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\packages.config",
+              "RelativeDocumentMoniker": "ComputerStore\\packages.config",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\packages.config",
+              "RelativeToolTip": "ComputerStore\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-08T09:50:30.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\Web.config",
+              "RelativeDocumentMoniker": "ComputerStore\\Web.config",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\Web.config",
+              "RelativeToolTip": "ComputerStore\\Web.config",
+              "ViewState": "AgIAAFYAAAAAAAAAAADgv2wAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-08T09:49:42.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BundleConfig.cs",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\App_Start\\BundleConfig.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\App_Start\\BundleConfig.cs",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\App_Start\\BundleConfig.cs",
+              "RelativeToolTip": "ComputerStore\\App_Start\\BundleConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:49:38.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FilterConfig.cs",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\App_Start\\FilterConfig.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\App_Start\\FilterConfig.cs",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\App_Start\\FilterConfig.cs",
+              "RelativeToolTip": "ComputerStore\\App_Start\\FilterConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:49:36.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\ComputerStore\\ComputerStore\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "ComputerStore\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:49:23.711Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
