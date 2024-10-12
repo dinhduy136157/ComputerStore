@@ -38,12 +38,12 @@
               "Title": "IndexController.cs",
               "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Controllers\\User\\IndexController.cs",
               "RelativeDocumentMoniker": "ComputerStore\\Controllers\\User\\IndexController.cs",
-              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Controllers\\User\\IndexController.cs",
-              "RelativeToolTip": "ComputerStore\\Controllers\\User\\IndexController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Controllers\\User\\IndexController.cs [Read Only]",
+              "RelativeToolTip": "ComputerStore\\Controllers\\User\\IndexController.cs [Read Only]",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAdAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T03:12:10.822Z",
-              "EditorCaption": ""
+              "EditorCaption": " [Read Only]"
             },
             {
               "$type": "Document",
@@ -51,12 +51,12 @@
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\.gitignore",
               "RelativeDocumentMoniker": "ComputerStore\\.gitignore",
-              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\.gitignore",
-              "RelativeToolTip": "ComputerStore\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\.gitignore [Read Only]*",
+              "RelativeToolTip": "ComputerStore\\.gitignore [Read Only]*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-10-12T03:10:45.63Z",
-              "EditorCaption": ""
+              "EditorCaption": " [Read Only]"
             },
             {
               "$type": "Document",
@@ -64,12 +64,12 @@
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Views\\User\\Index.cshtml",
               "RelativeDocumentMoniker": "ComputerStore\\Views\\User\\Index.cshtml",
-              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Views\\User\\Index.cshtml",
-              "RelativeToolTip": "ComputerStore\\Views\\User\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Views\\User\\Index.cshtml [Read Only]",
+              "RelativeToolTip": "ComputerStore\\Views\\User\\Index.cshtml [Read Only]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-12T03:10:38.251Z",
-              "EditorCaption": ""
+              "EditorCaption": " [Read Only]"
             },
             {
               "$type": "Document",
@@ -77,12 +77,12 @@
               "Title": "bootstrap.js",
               "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Scripts\\bootstrap.js",
               "RelativeDocumentMoniker": "ComputerStore\\Scripts\\bootstrap.js",
-              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Scripts\\bootstrap.js",
-              "RelativeToolTip": "ComputerStore\\Scripts\\bootstrap.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Scripts\\bootstrap.js [Read Only]",
+              "RelativeToolTip": "ComputerStore\\Scripts\\bootstrap.js [Read Only]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-10-12T03:10:31.752Z",
-              "EditorCaption": ""
+              "EditorCaption": " [Read Only]"
             }
           ]
         }
