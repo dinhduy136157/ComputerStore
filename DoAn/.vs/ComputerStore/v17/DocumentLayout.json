@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\views\\admin\\src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\views\\admin\\src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -27,19 +31,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Views\\Admin\\src\\index.html",
+              "RelativeDocumentMoniker": "ComputerStore\\Views\\Admin\\src\\index.html",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Views\\Admin\\src\\index.html",
+              "RelativeToolTip": "ComputerStore\\Views\\Admin\\src\\index.html",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-12T08:27:55.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Views\\User\\Index.cshtml",
               "RelativeDocumentMoniker": "ComputerStore\\Views\\User\\Index.cshtml",
               "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Views\\User\\Index.cshtml",
               "RelativeToolTip": "ComputerStore\\Views\\User\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-12T07:52:25.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IndexController.cs",
               "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Controllers\\User\\IndexController.cs",
               "RelativeDocumentMoniker": "ComputerStore\\Controllers\\User\\IndexController.cs",
@@ -52,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\.gitignore",
               "RelativeDocumentMoniker": "ComputerStore\\.gitignore",
