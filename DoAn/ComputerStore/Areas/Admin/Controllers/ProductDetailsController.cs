@@ -8,20 +8,20 @@ using System.Web;
 using System.Web.Mvc;
 using ComputerStore.Models;
 
-namespace ComputerStore.Controllers.User
+namespace ComputerStore.Areas.Admin.Controllers
 {
-    public class UserController : Controller
+    public class ProductDetailsController : Controller
     {
         private ComputerStoreEntities db = new ComputerStoreEntities();
 
-        // GET: Index
+        // GET: ProductDetails
         public ActionResult Index()
         {
             var productDetails = db.ProductDetails.Include(p => p.Product).Include(p => p.ProductSpecification);
             return View(productDetails.ToList());
         }
 
-        // GET: Index/Details/5
+        // GET: ProductDetails/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,7 +36,7 @@ namespace ComputerStore.Controllers.User
             return View(productDetail);
         }
 
-        // GET: Index/Create
+        // GET: ProductDetails/Create
         public ActionResult Create()
         {
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName");
@@ -44,7 +44,7 @@ namespace ComputerStore.Controllers.User
             return View();
         }
 
-        // POST: Index/Create
+        // POST: ProductDetails/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -63,7 +63,7 @@ namespace ComputerStore.Controllers.User
             return View(productDetail);
         }
 
-        // GET: Index/Edit/5
+        // GET: ProductDetails/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -80,7 +80,7 @@ namespace ComputerStore.Controllers.User
             return View(productDetail);
         }
 
-        // POST: Index/Edit/5
+        // POST: ProductDetails/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -98,7 +98,7 @@ namespace ComputerStore.Controllers.User
             return View(productDetail);
         }
 
-        // GET: Index/Delete/5
+        // GET: ProductDetails/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -113,7 +113,7 @@ namespace ComputerStore.Controllers.User
             return View(productDetail);
         }
 
-        // POST: Index/Delete/5
+        // POST: ProductDetails/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

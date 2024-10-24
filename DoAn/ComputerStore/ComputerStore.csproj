@@ -237,8 +237,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\Admin\IndexController.cs" />
-    <Compile Include="Controllers\User\IndexController.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductDetailsController.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2061,7 +2063,7 @@
     <Content Include="assets_admin\libs\twitter-bootstrap-wizard\jquery.bootstrap.wizard.min.js" />
     <Content Include="assets_admin\libs\x-editable\bootstrap-editable.css" />
     <Content Include="assets_admin\libs\x-editable\bootstrap-editable.min.js" />
-    <None Include="Views\Admin\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2069,11 +2071,10 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
-    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Areas\User\Views\Index.cshtml" />
     <Content Include="assets_user\css\style.css.map" />
     <Content Include="assets_user\css\style.scss" />
     <Content Include="assets_user\font\fonts\fontawesome-webfont.eot" />
@@ -2202,10 +2203,17 @@
     <Content Include="assets_admin\fonts\weathericons-regular-webfont-3.bin" />
     <Content Include="assets_admin\fonts\weathericons-regular-webfont-4.bin" />
     <Content Include="assets_admin\fonts\weathericons-regular-webfont.bin" />
+    <Content Include="Areas\Admin\Views\ProductDetails\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductDetails\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductDetails\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductDetails\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductDetails\Index.cshtml" />
+    <Content Include="Areas\User\Views\Shared\_LayoutUser.cshtml" />
+    <Content Include="Areas\User\Views\Shared\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Index\" />
+    <Folder Include="Areas\User\Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
