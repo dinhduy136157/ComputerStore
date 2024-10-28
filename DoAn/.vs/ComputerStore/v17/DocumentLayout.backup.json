@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\areas\\user\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\areas\\admin\\controllers\\productdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\controllers\\productdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\areas\\admin\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\computerstore\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\areas\\admin\\adminarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\adminarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\computerstore\\assets_admin\\js\\pages\\dashboard-1.init.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\assets_admin\\js\\pages\\dashboard-1.init.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\areas\\user\\userarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\userarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\areas\\admin\\views\\productdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\views\\productdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\computerstore\\areas\\admin\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,46 +34,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Global.asax.cs",
-              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Global.asax.cs",
-              "RelativeDocumentMoniker": "ComputerStore\\Global.asax.cs",
-              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Global.asax.cs",
-              "RelativeToolTip": "ComputerStore\\Global.asax.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T09:55:22.464Z",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\User\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "ComputerStore\\Areas\\User\\Views\\Index.cshtml",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\User\\Views\\Index.cshtml",
+              "RelativeToolTip": "ComputerStore\\Areas\\User\\Views\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-26T05:38:05.157Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserAreaRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\User\\UserAreaRegistration.cs",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\User\\UserAreaRegistration.cs",
-              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\User\\UserAreaRegistration.cs",
-              "RelativeToolTip": "ComputerStore\\Areas\\User\\UserAreaRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T09:44:18.748Z",
+              "DocumentIndex": 1,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Web.config",
+              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Views\\Web.config",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Web.config",
+              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Views\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-26T05:35:38.52Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AdminAreaRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\AdminAreaRegistration.cs",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\AdminAreaRegistration.cs",
-              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\AdminAreaRegistration.cs",
-              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\AdminAreaRegistration.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T09:44:04.428Z",
-              "EditorCaption": ""
+              "Title": "dashboard-1.init.js",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\assets_admin\\js\\pages\\dashboard-1.init.js",
+              "RelativeDocumentMoniker": "ComputerStore\\assets_admin\\js\\pages\\dashboard-1.init.js",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\assets_admin\\js\\pages\\dashboard-1.init.js",
+              "RelativeToolTip": "ComputerStore\\assets_admin\\js\\pages\\dashboard-1.init.js",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-24T10:58:26.065Z"
             },
             {
               "$type": "Document",
@@ -91,14 +82,26 @@
               "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcBAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T09:31:27.505Z",
+              "WhenOpened": "2024-10-24T10:57:14.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "OrderItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Controllers\\OrderItemsController.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Controllers\\OrderItemsController.cs",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Controllers\\OrderItemsController.cs",
+              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Controllers\\OrderItemsController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T01:21:49.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Controllers\\HomeController.cs",
@@ -106,47 +109,7 @@
               "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T09:17:54.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\ProductDetails\\Index.cshtml",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Views\\ProductDetails\\Index.cshtml",
-              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\ProductDetails\\Index.cshtml",
-              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Views\\ProductDetails\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-21T10:32:56.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductDetailsController.cs",
-              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Controllers\\ProductDetailsController.cs",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Controllers\\ProductDetailsController.cs",
-              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Controllers\\ProductDetailsController.cs",
-              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Controllers\\ProductDetailsController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T11:10:01.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAAPQBAAAAAAAAAAAAAAACAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-21T12:08:33.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T10:56:54.055Z"
             }
           ]
         }

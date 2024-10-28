@@ -239,6 +239,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrderItemsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductDetailsController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
@@ -352,6 +353,9 @@
     <Content Include="Models\DbContext.edmx.diagram">
       <DependentUpon>DbContext.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Admin\Views\OrderItems\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\OrderItems\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\OrderItems\Index.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
