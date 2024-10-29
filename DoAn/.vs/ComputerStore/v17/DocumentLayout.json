@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\views\\orderitems\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\anhph\\source\\repos\\doanchuyennganh\\doan\\computerstore\\areas\\admin\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\computerstore\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\computerstore\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-26T10:28:47.95Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -45,9 +36,35 @@
               "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Views\\OrderItems\\Index.cshtml",
               "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\OrderItems\\Index.cshtml",
               "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Views\\OrderItems\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-26T10:23:25.531Z",
+              "WhenOpened": "2024-10-28T10:35:20.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Controllers\\OrderItemsController.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Controllers\\OrderItemsController.cs",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Controllers\\OrderItemsController.cs",
+              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Controllers\\OrderItemsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T10:35:15.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "C:\\Users\\anhph\\source\\repos\\DoAnChuyenNganh\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-26T10:28:47.95Z",
               "EditorCaption": ""
             },
             {
