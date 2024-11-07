@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<ComputerStore.Models.OrderItem>
 
 @{
+    ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -26,26 +27,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Order.OrderID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Product.ProductName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.OrderItemID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.OrderItemID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.OrderItemID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order.OrderID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.ProductName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.OrderItemID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.OrderItemID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.OrderItemID })
+            </td>
+        </tr>
+    }
 
 </table>
