@@ -30,6 +30,8 @@ namespace ComputerStore.Models
         public int Quantity { get; set; }
         public string Description { get; set; }
         public Nullable<int> CategoryID { get; set; }
+        public string Image1 { get; set; }
+        public string Image2 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CartItem> CartItems { get; set; }
