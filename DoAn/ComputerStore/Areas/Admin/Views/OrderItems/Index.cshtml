@@ -10,44 +10,95 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Order.OrderID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Product.ProductName)
-        </th>
-        <th></th>
-    </tr>
+<div class="content-page">
+    <div class="content">
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Order.OrderID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product.ProductName)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.OrderItemID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.OrderItemID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.OrderItemID })
-            </td>
-        </tr>
-    }
+        <!-- Start Content-->
+        <div class="container-fluid">
 
-</table>
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Minton</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
+                                <li class="breadcrumb-item active">Datatables</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">Datatables</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h4 class="header-title">Buttons example</h4>
+                            <table id="datatable-buttons" class="table table-striped dt-responsive nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>Mã đơn</th>
+                                        <th>Tên KH</th>
+                                        <th>Ảnh</th>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Thời gian</th>
+                                        <th>Số lượng</th>
+                                        <th>Tổng tiền</th>
+                                        <th>Thao tác</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.OrderItemID)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Order.User.UserName)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Product.ProductName)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Product.ProductName)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Order.OrderDate)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Quantity)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Price)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("edit", "edit", new { id = item.OrderItemID }) |
+                                                @Html.ActionLink("details", "details", new { id = item.OrderItemID }) |
+                                                @Html.ActionLink("delete", "delete", new { id = item.OrderItemID })
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                    }
+                                   
+
+                                </tbody>
+                            </table>
+
+                        </div> <!-- end card body-->
+                    </div> <!-- end card -->
+                </div><!-- end col-->
+            </div>
+            <!-- end row-->
+        </div> <!-- container -->
+
+    </div> <!-- content -->
+
+</div>
