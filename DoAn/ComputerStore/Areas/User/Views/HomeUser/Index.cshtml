@@ -1,0 +1,835 @@
+﻿
+@inherits System.Web.Mvc.WebViewPage
+@using System.Web.Optimization
+
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="@Url.Content("~/assets_user/css/style.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/assets_user/font/css/all.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/assets_user/css/base.css")" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="@Url.Content("~/assets_user/renderlist.js")"></script>
+    <script src="@Url.Content("~/assets_user/test.js")"></script>
+    <script src="@Url.Content("~/assets_user/slider.js")"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header-full grid-full-width">
+            <div class="header-fixed">
+                <div class="header grid">
+                    <div class="logo">
+                        <a href="/" class="logo-link">
+                            <img class="logo-img" src="~/assets_user/image/logo/logo_header.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="right-header">
+                        <div class="top-header">
+                            <div class="search">
+                                <input class="search-area" placeholder="Nhập mã hoặc tên sản phẩm..." type="text">
+                                <div class="search-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="account">
+                                @if (Session["UserID"] != null)
+                                {
+                                    <a class="header-top-right" href="#">
+                                        <i class="fas fa-user-circle"></i>
+                                        <div class="header-right-text">Chào, @Session["UserName"]</div>
+                                    </a>
+                                    <a class="header-top-right" href="@Url.Action("Logout","Account")">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        <div class="header-right-text">Đăng xuất</div>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a class="header-top-right" href="@Url.Action("Register","Account")">
+                                        <i class="far fa-clipboard"></i>
+                                        <div class="header-right-text">Đăng ký</div>
+                                    </a>
+                                    <a class="header-top-right" href="@Url.Action("Login","Account")">
+                                        <i class="fas fa-user-circle"></i>
+                                        <div class="header-right-text">Đăng nhập</div>
+                                    </a>
+                                }
+
+                                <a class="header-top-right" href="">
+                                    <i class="fas fa-piggy-bank"></i>
+                                    <div class="header-right-text">Khuyến mãi</div>
+                                </a>
+                                <a class="header-top-right" href="#">
+                                    <div class="icon-has-notice">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span class="cart-notice">0</span>
+                                    </div>
+
+                                    <div class="header-right-text">Giỏ hàng</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bot-header">
+                            <ul class="info">
+                                <li>
+                                    <a class="info-text" href="">Hệ thống Showroom tại TP. Hồ Chí Minh - Hà Nội</a>
+                                </li>
+                                <li>
+                                    <a class="info-text" href=""><i class="fas fa-phone-square-alt"></i>Tổng đài</a>
+                                </li>
+                                <li>
+                                    <a class="info-text" href=""><i class="fab fa-youtube"></i>Videos</a>
+                                </li>
+                                <li>
+                                    <a class="info-text" href=""><i class="fas fa-newspaper"></i>Tin công nghệ</a>
+                                </li>
+                                <li>
+                                    <a class="info-text" href=""><i class="fas fa-user"></i>Tuyển dụng</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-header grid">
+                    <div class="product-catalog">
+                        <i class="fas fa-bars"></i>
+                        Danh mục sản phẩm
+                    </div>
+                    <div class="header-navigation-list">
+                        <a href="" class="header-navigation-item">
+                            <i class="fas fa-gift"></i>
+                            Tổng hợp khuyến mãi
+                        </a>
+                        <a href="" class="header-navigation-item">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            Hướng dẫn thanh toán
+                        </a>
+                        <a href="" class="header-navigation-item">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            Hướng dẫn trả góp
+                        </a>
+                        <a href="" class="header-navigation-item">
+                            <i class="fas fa-shield-alt"></i>
+                            Chính sách bảo mật
+                        </a>
+                        <a href="" class="header-navigation-item">
+                            <i class="fas fa-shuttle-van"></i>
+                            Chính sách vận chuyển
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-content grid">
+                <div class="grid__row row">
+                    <ul class="catalog-list col-2">
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-laptop"></i>
+                                <span class="catalog-name">
+                                    Laptop
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx1.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-laptop-code"></i>
+                                <span class="catalog-name">
+                                    PC Gaming
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="http://theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx2.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-laptop-code"></i>
+                                <span class="catalog-name">
+                                    PC - Workstation
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx3.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-laptop-code"></i>
+                                <span class="catalog-name">
+                                    PC Văn Phòng
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx4.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-microchip"></i>
+                                <span class="catalog-name">
+                                    Linh Kiện PC
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx5.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-desktop"></i>
+                                <span class="catalog-name">
+                                    Màn Hình
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx6.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="far fa-keyboard"></i>
+                                <span class="catalog-name">
+                                    Bàn Phím
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx7.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-mouse"></i>
+                                <span class="catalog-name">
+                                    Chuột + Lót Chuột
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx8.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-headphones-alt"></i>
+                                <span class="catalog-name">
+                                    Tai Nghe Gaming
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx9.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-chair"></i>
+                                <span class="catalog-name">
+                                    Ghế Gaming
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx10.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fab fa-playstation"></i>
+                                <span class="catalog-name">
+                                    Console
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx11.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-volume-up"></i>
+                                <span class="catalog-name">
+                                    Thiết Bị Audio
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx12.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-calculator"></i>
+                                <span class="catalog-name">
+                                    Thiết Bị Văn Phòng
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx13.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fas fa-network-wired"></i>
+                                <span class="catalog-name">
+                                    Thiết Bị Mạng
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx14.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <a href="#" class="catalog-item-link">
+                                <i class="fab fa-usb"></i>
+                                <span class="catalog-name">
+                                    Phụ Kiện
+                                </span>
+                            </a>
+                            <div class="products-of-catalog">
+                                <div class="product-catalog-container">
+                                    <div class="product-of-catalog-content">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="product-of-catalog-banner">
+                                        <a href="" class="product-of-catalog-link">
+                                            <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx15.png?v=19077"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-banner">
+                    <div class="slider col-6">
+                        <div class="main-slider">
+                            <div class="list-slider" id="list-slider">
+                                <div class="slider-item">
+                                    <a class="slider-link" href="">
+                                        <img class="slider-img" src="~/assets_user/image/slider/slider1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slider-item">
+                                    <a class="slider-link" href="">
+                                        <img class="slider-img" src="~/assets_user/image/slider/slider2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slider-item">
+                                    <a class="slider-link" href="">
+                                        <img class="slider-img" src="~/assets_user/image/slider/slider3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slider-item">
+                                    <a class="slider-link" href="">
+                                        <img class="slider-img" src="~/assets_user/image/slider/slider4.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slider-item">
+                                    <a class="slider-link" href="">
+                                        <img class="slider-img" src="~/assets_user/image/slider/slider5.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slider-item">
+                                    <a class="slider-link" href="">
+                                        <img class="slider-img" src="~/assets_user/image/slider/slider6.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slider-item">
+                                    <a class="slider-link" href="">
+                                        <img class="slider-img" src="~/assets_user/image/slider/slider7.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slider-item">
+                                    <a class="slider-link" href="">
+                                        <img class="slider-img" src="~/assets_user/image/slider/slider8.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slider-item">
+                                    <a class="slider-link" href="">
+                                        <img class="slider-img" src="~/assets_user/image/slider/slider9.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="slider-item">
+                                    <a class="slider-link" href="">
+                                        <img class="slider-img" src="~/assets_user/image/slider/slider10.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slider-control">
+                                <div class="slider-icon left" id="icon-left">
+                                    <i class="fas fa-angle-left"></i>
+                                </div>
+                                <div class="slider-icon right" id="icon-right">
+                                    <i class="fas fa-angle-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-slider">
+                            <a class="sub-slider-link1" href="">
+                                <img class="sub-slider-img" src="~/assets_user/image/sub-slider/sub-sli1.jpg" alt="">
+                            </a>
+                            <a class="sub-slider-link2" href="">
+                                <img class="sub-slider-img" src="~/assets_user/image/sub-slider/sub-sli2.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sub-banner">
+                        <a class="sub-banner-link1" href="">
+                            <img class="sub-banner-img" src="~/assets_user/image/sub-slider/sub-ban1.jpg" alt="">
+                        </a>
+                        <a class="sub-banner-link2" href="">
+                            <img class="sub-banner-img" src="~/assets_user/image/sub-slider/sub-ban2.jpg" alt="">
+                        </a>
+                        <a class="sub-banner-link3" href="">
+                            <img class="sub-banner-img" src="~/assets_user/image/sub-slider/sub-ban3.jpg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container grid-full-width">
+            <div class="container-content grid">
+                <div class="container-banner row">
+                    <a href="" class="container-banner-link col">
+                        <img class="container-banner-img" src="~/assets_user/image/container-banner/xxxbanner1.jpg" alt="">
+                    </a>
+                    <a href="" class="container-banner-link col">
+                        <img class="container-banner-img" src="~/assets_user/image/container-banner/xxxbanner2.jpg" alt="">
+                    </a>
+                    <a href="" class="container-banner-link col">
+                        <img class="container-banner-img" src="~/assets_user/image/container-banner/xxxbanner3.jpg" alt="">
+                    </a>
+                    <a href="" class="container-banner-link col">
+                        <img class="container-banner-img" src="~/assets_user/image/container-banner/xxxbanner4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <div class="product-header">
+                        <span class="product-header-theme">Deal hot trong tháng</span>
+                    </div>
+                    <div id="product" class="product-list">
+                    </div>
+                </div>
+                <div class="product-content">
+                    <div class="product-header">
+                        <span class="product-header-theme">Top PC Bán Chạy</span>
+                        <a href="" class="product-view-all">
+                            Xem tất cả
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <div id="product2" class="product-list">
+                    </div>
+                </div>
+                <div class="product-content">
+                    <div class="product-header">
+                        <span class="product-header-theme">LAPTOP GAMING GIÁ TỐT NHẤT</span>
+                        <a href="" class="product-view-all">
+                            Xem tất cả
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <div id="product3" class="product-list">
+                    </div>
+                </div>
+                <div class="product-content">
+                    <div class="product-header">
+                        <span class="product-header-theme">MÀN HÌNH KHUYẾN MÃI HOT</span>
+                        <a href="" class="product-view-all">
+                            Xem tất cả
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <div id="product4" class="product-list">
+                    </div>
+                </div>
+                <div class="product-content">
+                    <div class="product-header">
+                        <span class="product-header-theme">LAPTOP MỎNG NHẸ</span>
+                        <a href="" class="product-view-all">
+                            Xem tất cả
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <div id="product5" class="product-list">
+                    </div>
+                </div>
+                <div class="product-content">
+                    <div class="product-header">
+                        <span class="product-header-theme">BÀN PHÍM GAMING GIÁ RẺ</span>
+                        <a href="" class="product-view-all">
+                            Xem tất cả
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <div id="product6" class="product-list">
+                    </div>
+                </div>
+                <div class="product-content">
+                    <div class="product-header">
+                        <span class="product-header-theme">CHUỘT GAMING LOGITECH</span>
+                        <a href="" class="product-view-all">
+                            Xem tất cả
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <div id="product7" class="product-list">
+                    </div>
+                </div>
+                <div class="email-register grid">
+                    <div class="intro-text">
+                        Mua hàng online với nhiều ưu đãi hơn tại GEARVN
+                    </div>
+                    <div class="email-form">
+                        <input type="email" placeholder="Nhập email của bạn" class="email-input">
+                        <p class="email-btn">Đăng ký</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer grid-full-width">
+            <div class="footer-container grid">
+                <div class="gearvn-about">
+                    <h3>CÔNG TY TNHH THƯƠNG MẠI GEARVN</h3>
+                    <h3>EMAIL: CSKH@GEARVN.COM</h3>
+                    <span class="switchboard">Hệ thống tổng đài miễn phí:</span>
+                    <span class="work-time">(Làm việc từ 8h00 - 22h00)</span>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="td-text">Gọi mua hàng</td>
+                                <td class="td-number">1800 6975</td>
+                            </tr>
+                            <tr>
+                                <td class="td-text">Hỗ trợ khách hàng</td>
+                                <td class="td-number">1800 6173</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="gearvn-chinhsach">
+                        <a href="">Chính sách bảo hành</a>
+                        <a href="">Chính sách thanh toán</a>
+                        <a href="">Chính sách giao hàng</a>
+                        <a href="">Chính sách bảo mật</a>
+                    </div>
+                    <a href="" class="footer-link">
+                        <img src="./assets_user/image/footer-img/footer1.png" alt="" class="footer-img">
+                    </a>
+                </div>
+                <div class="gearvn-branch">
+                    <a href="" class="he-thong">
+                        HỆ THỐNG CỬA HÀNG:
+                    </a>
+                    <div class="branch-HCM-HN">
+                        <span class="H-branch">SHOWROOM HCM</span>
+                        <span class="H-work-time">(Làm việc từ 8h00 - 22h00)</span>
+                        <p class="H-address">- Địa chỉ 1: 78-80-82 Hoàng Hoa Thám, Phường 12, Quận Tân Bình.</p>
+                        <p class="H-address">- Địa chỉ 2: 189 Cống Quỳnh, Phường Nguyễn Cư Trinh, Quận 1.</p>
+
+                        <span class="H-branch">SHOWROOM HN</span>
+                        <span class="H-work-time">(Làm việc từ 8h00 - 21h00)</span>
+                        <p class="H-address">- Địa chỉ : 37 Ngõ 121 Thái Hà, Phường Trung Liệt, Quận Đống Đa.</p>
+                    </div>
+
+                    <p class="buy-more">
+                        Mua <a href="">PC Gaming</a>,
+                        <a href="">laptop</a>,
+                        <a href="">card màn hình</a>,
+                        <a href="">màn hình máy tính</a>,
+                        thiết bị chơi game như
+                        <a href="">PS5</a> hàng đầu Việt Nam bảo hành chính hãng.
+                        Mua online nhận nhiều ưu đãi hấp dẫn.
+                    </p>
+
+                    <div class="about-company">
+                        <p class="company-content">- Công ty TNHH Thương Mại Gearvn</p>
+                        <p class="company-content">
+                            - GPKD số 0316517394 do Sở KH và ĐT TP Hồ Chí Minh cấp ngày
+                            01/10/2020
+                        </p>
+                        <p class="company-content">- GĐ/Sở hữu website: Nguyễn Thế Anh</p>
+                    </div>
+
+                    <a href="" class="footer-link-DMCA">
+                        <img src="~/assets_user/image/footer-img/footer2.png" alt="" class="footer-img-DMCA">
+                    </a>
+                </div>
+                <div class="gearvn-facebook">
+                    <h3 class="fanpage">FANPAGE</h3>
+                    <div class="about-gearvn-facebook">
+                        <img class="facebook-bg-img"
+                             src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/s526x296/217622760_1833689093470898_5597792046803078944_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=dd9801&_nc_ohc=JnEtf_tO3BMAX8_B2hC&_nc_ht=scontent.fhan2-4.fna&edm=ANISlOoEAAAA&oh=1e2faa9b7a1c3343ff70bfb5e0f7d4d8&oe=60F28B15"
+                             alt="">
+                        <div class="gearvn-facebook-header">
+                            <a href="https://www.facebook.com/gearvnhcm/" class="gearvn-logo-link">
+                                <img class="gearvn-logo-img"
+                                     src="https://scontent.fhan2-4.fna.fbcdn.net/v/t1.6435-9/133650752_1681635212009621_7346227945159076913_n.jpg?_nc_cat=1&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=DinjYzycFIwAX-Ap_7t&_nc_ht=scontent.fhan2-4.fna&oh=92a9c17eb87e8150a35ddfb0c2693f3b&oe=60F28F18"
+                                     alt="">
+                            </a>
+                            <div class="gearvn-info">
+                                <div class="gearvn-name-container">
+                                    <a class="gearvn-name" href="https://www.facebook.com/gearvnhcm/">Gearvn</a>
+                                    <div class="check-icon">
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="gearvn-like">401.666 lượt thích</div>
+                            </div>
+                        </div>
+
+                        <div class="gearvn-facebook-btn">
+                            <a href="https://www.facebook.com/gearvnhcm/" class="like-btn">
+                                <span class="facebook-content">
+                                    <i class="fab fa-facebook-square"></i>
+                                    Thích trang
+                                </span>
+                            </a>
+                            <a href="https://www.facebook.com/gearvnhcm/" class="message-btn">
+                                <span class="message-content">
+                                    <i class="fas fa-comments"></i>
+                                    Gửi tin nhắn
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+</html>
