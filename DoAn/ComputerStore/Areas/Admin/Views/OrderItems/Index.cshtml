@@ -4,7 +4,6 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-
 <h2>Index</h2>
 
 <p>
@@ -24,10 +23,10 @@
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Minton</a></li>
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                                <li class="breadcrumb-item active">Datatables</li>
+                                <li class="breadcrumb-item active">Quản lý đơn hàng</li>
                             </ol>
                         </div>
-                        <h4 class="page-title">Datatables</h4>
+                        <h4 class="page-title">Quản lý đơn hàng</h4>
                     </div>
                 </div>
             </div>
@@ -37,7 +36,7 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="header-title">Buttons example</h4>
+                            <h4 class="header-title">Danh sách đơn hàng</h4>
                             <table id="datatable-buttons" class="table table-striped dt-responsive nowrap">
                                 <thead>
                                     <tr>
@@ -48,6 +47,7 @@
                                         <th>Thời gian</th>
                                         <th>Số lượng</th>
                                         <th>Tổng tiền</th>
+                                        <th>Trạng thái</th>
                                         <th>Thao tác</th>
                                         <th>Thao tác</th>
                                     </tr>
@@ -63,7 +63,7 @@
                                                 @Html.DisplayFor(modelItem => item.Order.User.UserName)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.Product.Image1)
+                                                <image style="height: 120px" src="~/Sources/@Html.DisplayFor(modelItem => item.Product.Image1)"></image>
                                             </td>
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.Product.ProductName)
@@ -78,16 +78,30 @@
                                                 @Html.DisplayFor(modelItem => item.Price)
                                             </td>
                                             <td>
+                                                @if (item.Status == "Đang chờ xác nhận")
+                                                {
+                                                    <span class="badge label-table badge-secondary">@Html.DisplayFor(modelItem => item.Status)</span>
+                                                }
+                                                else if (item.Status == "Giao hàng thành công")
+                                                {
+                                                    <span class="badge label-table badge-success">@Html.DisplayFor(modelItem => item.Status)</span>
+                                                }
+                                                else if (item.Status == "Đã huỷ")
+                                                {
+                                                    <span class="badge label-table badge-danger">@Html.DisplayFor(modelItem => item.Status)</span>
+                                                }
+                                            </td>
+
+                                            <td>
                                                 @Html.ActionLink("edit", "edit", new { id = item.OrderItemID }) |
                                                 @Html.ActionLink("details", "details", new { id = item.OrderItemID }) |
                                                 @Html.ActionLink("delete", "delete", new { id = item.OrderItemID })
                                             </td>
                                             <td>
-
                                             </td>
                                         </tr>
                                     }
-                                   
+
 
                                 </tbody>
                             </table>
@@ -101,4 +115,5 @@
 
     </div> <!-- content -->
 
+    
 </div>

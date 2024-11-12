@@ -2076,6 +2076,7 @@
     <Content Include="assets_admin\libs\x-editable\bootstrap-editable.css" />
     <Content Include="assets_admin\libs\x-editable\bootstrap-editable.min.js" />
     <None Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Sources\Product1.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
