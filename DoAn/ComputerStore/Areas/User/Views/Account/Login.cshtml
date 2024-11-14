@@ -1,0 +1,72 @@
+﻿@model ComputerStore.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đăng Nhập</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/assets_user/css/login.css")">
+</head>
+<body>
+    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+        <div class="container">
+            <div class="card login-card">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                        <img src="~/assets_user/image/logo/logo_header.svg" alt="login" class="login-card-img">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <div class="brand-wrapper">
+                                <img src="~/assets_user/image/logo/logo_header.svg" alt="logo" class="logo">
+                            </div>
+                            <p class="login-card-description">Đăng nhập vào tài khoản của bạn</p>
+
+                            @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { id = "loginForm" }))
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "sr-only" })
+                                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Địa chỉ email", id = "email" })
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "sr-only" })
+                                    @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "***********", id = "password" })
+                                </div>
+
+                                <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="Đăng nhập">
+                            }
+
+                            <a href="#!" class="forgot-password-link">Quên mật khẩu?</a>
+                            <p class="login-card-footer-text">Chưa có tài khoản? <a href="@Url.Action("Register", "Account")" class="text-reset">Đăng ký ngay</a></p>
+                            <nav class="login-card-footer-nav">
+                                <a href="#!">Điều khoản sử dụng</a>
+                                <a href="#!">Chính sách bảo mật</a>
+                            </nav>
+                            <div class="text-center mt-4">
+                                <a href="@Url.Action("Index", "HomeUser")" class="btn btn-secondary">Quay lại trang chủ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
