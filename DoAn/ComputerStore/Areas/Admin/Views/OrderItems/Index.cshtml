@@ -44,12 +44,13 @@
                                         <th>Tên KH</th>
                                         <th>Ảnh</th>
                                         <th>Tên sản phẩm</th>
+                                        <th>Địa chỉ</th>
                                         <th>Thời gian</th>
                                         <th>Số lượng</th>
                                         <th>Tổng tiền</th>
                                         <th>Trạng thái</th>
                                         <th>Thao tác</th>
-                                        <th>Thao tác</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -69,11 +70,14 @@
                                                 @Html.DisplayFor(modelItem => item.Product.ProductName)
                                             </td>
                                             <td>
+                                                @Html.DisplayFor(modelItem => item.Order.User.Address)
+                                            </td>
+                                            <td>
                                                 @Html.DisplayFor(modelItem => item.Order.OrderDate)
                                             </td>
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.Quantity)
-                                            </td>
+                                            </td>   
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.Price)
                                             </td>
@@ -93,8 +97,6 @@
                                             </td>
 
                                             <td>
-                                                @Html.ActionLink("edit", "edit", new { id = item.OrderItemID }) |
-                                                @Html.ActionLink("details", "details", new { id = item.OrderItemID }) |
                                                 @Html.ActionLink("delete", "delete", new { id = item.OrderItemID })
                                             </td>
                                             <td>
