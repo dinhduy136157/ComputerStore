@@ -17,24 +17,10 @@ namespace ComputerStore.Areas.Admin.Controllers
         // GET: Admin/ProductDetails
         public ActionResult Index()
         {
-            var productDetails = db.ProductDetails.Include(p => p.Product).Include(p => p.ProductSpecification);
+            var productDetails = db.ProductDetails.Include(p => p.Product).Include(p => p.Product.Category).Include(p => p.ProductSpecification);
             return View(productDetails.ToList());
         }
 
-        // GET: Admin/ProductDetails/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            ProductDetail productDetail = db.ProductDetails.Find(id);
-            if (productDetail == null)
-            {
-                return HttpNotFound();
-            }
-            return View(productDetail);
-        }
 
         // GET: Admin/ProductDetails/Create
         public ActionResult Create()
