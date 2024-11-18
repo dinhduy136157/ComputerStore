@@ -1,52 +1,168 @@
-﻿@model ComputerStore.Models.ProductDetail
+﻿@model ComputerStore.Models.Product
 
 @{
     ViewBag.Title = "Create";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<div class="content-page">
+    <div class="content">
+        <h2>Thêm sản phẩm mới</h2>
 
-<h2>Create</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>ProductDetail</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.ProductID, "ProductID", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("ProductID", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ProductID, "", new { @class = "text-danger" })
+            <div class="form-horizontal">
+                <h4>Sản phẩm</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <!-- Tên sản phẩm -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ProductName, "Tên sản phẩm", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Giá sản phẩm -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Price, "Giá sản phẩm", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Số lượng -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Quantity, "Số lượng", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Thể loại -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CategoryID, "Thể loại", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("CategoryID", null, "Chọn thể loại", new { @class = "form-control", id = "categoryDropdown" })
+                        @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Dynamic Fields (Hiển thị ngay bên dưới DropDownList) -->
+                <div id="dynamicFields" class="form-group" style="margin-top: 20px;">
+                    <!-- Nội dung sẽ được cập nhật động -->
+                </div>
+
+                <!-- Mô tả -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Description, "Mô tả", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 5 })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Thêm mới" class="btn btn-primary" />
+                    </div>
+                </div>
             </div>
-        </div>
+        }
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.SpecificationID, "SpecificationID", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("SpecificationID", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.SpecificationID, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.SpecificationValue, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SpecificationValue, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SpecificationValue, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+        <div>
+            @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-secondary" })
         </div>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#categoryDropdown').change(function () {
+            const categoryID = $(this).val();
+            const dynamicFields = $('#dynamicFields');
+            dynamicFields.empty(); // Xóa các trường động hiện tại.
+
+            // Tùy chỉnh các trường thông số dựa trên CategoryID.
+            switch (categoryID) {
+                case "1": // Cây máy tính
+                    dynamicFields.append(`
+                        <label class="control-label col-md-2">Thông số kỹ thuật</label>
+                        <div class="col-md-10">
+                            <div>
+                                <label>RAM</label>
+                                <input type="text" name="Specifications[RAM]" class="form-control" />
+                            </div>
+                            <div>
+                                <label>Card</label>
+                                <input type="text" name="Specifications[Card]" class="form-control" />
+                            </div>
+                            <div>
+                                <label>Mainboard</label>
+                                <input type="text" name="Specifications[Mainboard]" class="form-control" />
+                            </div>
+                            <div>
+                                <label>Ổ cứng</label>
+                                <input type="text" name="Specifications[OCung]" class="form-control" />
+                            </div>
+                        </div>
+                    `);
+                    break;
+                case "2": // Màn hình
+                    dynamicFields.append(`
+                        <label class="control-label col-md-2">Thông số kỹ thuật</label>
+                        <div class="col-md-10">
+                            <div>
+                                <label>Kích thước</label>
+                                <input type="text" name="Specifications[KichThuoc]" class="form-control" />
+                            </div>
+                            <div>
+                                <label>Tần số quét</label>
+                                <input type="text" name="Specifications[TanSoQuet]" class="form-control" />
+                            </div>
+                        </div>
+                    `);
+                    break;
+                case "3": // Chuột
+                    dynamicFields.append(`
+                        <label class="control-label col-md-2">Thông số kỹ thuật</label>
+                        <div class="col-md-10">
+                            <div>
+                                <label>Kết nối</label>
+                                <input type="text" name="Specifications[KetNoi]" class="form-control" />
+                            </div>
+                            <div>
+                                <label>DPI</label>
+                                <input type="text" name="Specifications[DPI]" class="form-control" />
+                            </div>
+                        </div>
+                    `);
+                    break;
+                case "4": // Tai nghe
+                    dynamicFields.append(`
+                        <label class="control-label col-md-2">Thông số kỹ thuật</label>
+                        <div class="col-md-10">
+                            <div>
+                                <label>Kích thước</label>
+                                <input type="text" name="Specifications[KichThuoc]" class="form-control" />
+                            </div>
+                            <div>
+                                <label>Trọng lượng</label>
+                                <input type="text" name="Specifications[TrongLuong]" class="form-control" />
+                            </div>
+                        </div>
+                    `);
+                    break;
+                default:
+                    dynamicFields.append('<div>Hãy chọn thể loại để nhập thông số kỹ thuật.</div>');
+            }
+        });
+    });
+</script>

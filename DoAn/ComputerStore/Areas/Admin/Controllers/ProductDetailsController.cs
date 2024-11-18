@@ -22,32 +22,31 @@ namespace ComputerStore.Areas.Admin.Controllers
         }
 
 
-        // GET: Admin/ProductDetails/Create
         public ActionResult Create()
         {
-            ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName");
-            ViewBag.SpecificationID = new SelectList(db.ProductSpecifications, "SpecificationID", "SpecificationName");
+            // Lấy danh sách các Category từ bảng Categories
+            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName");
             return View();
         }
 
-        // POST: Admin/ProductDetails/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductID,SpecificationID,SpecificationValue")] ProductDetail productDetail)
+        public ActionResult Create(Product product)
         {
             if (ModelState.IsValid)
             {
-                db.ProductDetails.Add(productDetail);
+                // Lưu sản phẩm mới vào bảng Products
+                db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName", productDetail.ProductID);
-            ViewBag.SpecificationID = new SelectList(db.ProductSpecifications, "SpecificationID", "SpecificationName", productDetail.SpecificationID);
-            return View(productDetail);
+            // Truyền lại danh sách Categories nếu lưu thất bại
+            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", product.CategoryID);
+            return View(product);
         }
+
+
 
         // GET: Admin/ProductDetails/Edit/5
         public ActionResult Edit(int? id)
