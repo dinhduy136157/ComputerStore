@@ -50,7 +50,7 @@ namespace ComputerStore.Areas.User.Controllers
             // Danh sách 10 Tai nghe từ top10PhoneIds
             var top10PhoneIds = (from oi in db.OrderItems
                                  join p in db.Products on oi.ProductID equals p.ProductID
-                                 where p.CategoryID == 2
+                                 where p.CategoryID == 3
                                  group oi by oi.ProductID into g
                                  orderby g.Sum(x => x.Quantity) descending
                                  select g.Key)
@@ -70,7 +70,7 @@ namespace ComputerStore.Areas.User.Controllers
             // Danh sách 10 Màn hình từ top10Screen
             var top10Screen = (from oi in db.OrderItems
                                join p in db.Products on oi.ProductID equals p.ProductID
-                               where p.CategoryID == 3
+                               where p.CategoryID == 2
                                group oi by oi.ProductID into g
                                orderby g.Sum(x => x.Quantity) descending
                                select g.Key)

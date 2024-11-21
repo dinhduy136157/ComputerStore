@@ -236,7 +236,7 @@
                         <div class="product-item">
                             <a href="" class="product-link" id="product-link">
                                 <div class="product-img">
-                                    <img src="https://product.hstatic.net/1000026716/product/1_e5c97edf405046eb96fc7896e3c56087_large.jpg" alt="">
+                                    <img src="~/assets_user/image/data-image/@item.P.Image1" alt="">
                                     <div class="add-to-cart">
                                         <div class="add-content">
                                             <span class="view-detail">Click để xem chi tiết</span>
@@ -259,7 +259,7 @@
                             </div>
                         </div>
                     }
-
+                    
                 </div>
             </div>
             <div class="product-content">
@@ -271,6 +271,34 @@
                     </a>
                 </div>
                 <div id="product3" class="product-list">
+                    @foreach (var item in Model.PhoneDetailsList.GroupBy(p => p.P.ProductID).Select(g => g.First()))
+                    {
+                        <div class="product-item">
+                            <a href="" class="product-link" id="product-link">
+                                <div class="product-img">
+                                    <img src="~/assets_user/image/data-image/@item.P.Image1" alt="">
+                                    <div class="add-to-cart">
+                                        <div class="add-content">
+                                            <span class="view-detail">Click để xem chi tiết</span>
+                                            <span class="add-btn">Đặt hàng</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 class="product-name">
+                                    @item.P.ProductName
+                                </h2>
+                            </a>
+                            <div class="product-about-price">
+                                <div class="product-price">
+                                    <p class="original-price">20,420,000₫</p>
+                                    <p class="new-price">19,490,000₫</p>
+                                </div>
+                                <div class="product-sale-off">
+                                    -5%
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
             <div class="product-content">
@@ -282,6 +310,34 @@
                     </a>
                 </div>
                 <div id="product4" class="product-list">
+                    @foreach (var item in Model.ScreenDetailsList.GroupBy(p => p.P.ProductID).Select(g => g.First()))
+                    {
+                        <div class="product-item">
+                            <a href="" class="product-link" id="product-link">
+                                <div class="product-img">
+                                    <img src="~/assets_user/image/data-image/@item.P.Image1" alt="">
+                                    <div class="add-to-cart">
+                                        <div class="add-content">
+                                            <span class="view-detail">Click để xem chi tiết</span>
+                                            <span class="add-btn">Đặt hàng</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 class="product-name">
+                                    @item.P.ProductName
+                                </h2>
+                            </a>
+                            <div class="product-about-price">
+                                <div class="product-price">
+                                    <p class="original-price">20,420,000₫</p>
+                                    <p class="new-price">19,490,000₫</p>
+                                </div>
+                                <div class="product-sale-off">
+                                    -5%
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
             <div class="email-register grid">
