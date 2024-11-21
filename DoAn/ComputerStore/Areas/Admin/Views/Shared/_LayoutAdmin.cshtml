@@ -265,7 +265,7 @@
 
                     </div>
                 </li>
-              
+
             </ul>
         </div>
         <!-- end Topbar -->
@@ -329,7 +329,6 @@
     @Scripts.Render("~/assets_admin/libs/jquery-knob/jquery.knob.min.js")
     @Scripts.Render("~/assets_admin/libs/peity/jquery.peity.min.js")
     @Scripts.Render("~/assets_admin/libs/jquery-sparkline/jquery.sparkline.min.js")
-    @Scripts.Render("~/assets_admin/js/pages/dashboard-1.init.js")
     @Scripts.Render("~/assets_admin/js/app.min.js")
     <!-- third party js -->
     @Scripts.Render("~/assets_admin/libs/datatables/jquery.dataTables.min.js")
@@ -346,10 +345,11 @@
     @Scripts.Render("~/assets_admin/libs/pdfmake/pdfmake.min.js")
     @Scripts.Render("~/assets_admin/libs/pdfmake/vfs_fonts.js")
     @Scripts.Render("~/assets_admin/js/pages/datatables.init.js")
+
+
     <!-- third party js ends -->
     <!-- Datatables init -->
     <script src="assets\js\pages\datatables.init.js"></script>
-    @RenderSection("scripts", required: false)
-
+    @Scripts.Render("~/assets_admin/js/pages/dashboards-1.init.js")
 </body>
 </html>

@@ -1,8 +1,8 @@
-﻿
+﻿@model ComputerStore.Areas.Admin.Controllers.HomeController.DashboardViewModel
+
 @{
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-@inherits System.Web.Mvc.WebViewPage
 
 <main>
     <!-- Begin page -->
@@ -30,58 +30,107 @@
                     <!-- end page title -->
 
                     <div class="row">
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card-box">
-                                <div class="float-left" dir="ltr">
-                                    <input data-plugin="knob" data-width="70" data-height="70" data-fgcolor="#7266ba" data-bgcolor="#ebeff2" value="58" data-skin="tron" data-angleoffset="0" data-readonly="true" data-thickness=".15">
-                                </div>
-                                <div class="text-right">
-                                    <h3 class="mb-1"> 268 </h3>
-                                    <p class="text-muted mb-1">New Customers</p>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
+                        @if (Model.StatusCounts != null && Model.StatusCounts.Count > 0)
+                        {
 
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card-box">
-                                <div class="float-left" dir="ltr">
-                                    <input data-plugin="knob" data-width="70" data-height="70" data-fgcolor="#f672a7" data-bgcolor="#ebeff2" value="80" data-skin="tron" data-angleoffset="0" data-readonly="true" data-thickness=".15">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card-box">
+                                    <div class="float-left" dir="ltr">
+                                        <input data-plugin="knob" data-width="70" data-height="70" data-fgcolor="green" data-bgcolor="#ebeff2" value="@(Model.StatusCounts[0].OrderCount * 100 / Model.totalStatusOrderCount)" data-skin="tron" data-angleoffset="0" data-readonly="true" data-thickness=".15">
+                                    </div>
+                                    <div class="text-right">
+                                        <h3 class="mb-1"> @Model.StatusCounts[0].OrderCount </h3>
+                                        <p class="text-muted mb-1">Giao hàng thành công</p>
+                                    </div>
                                 </div>
-                                <div class="text-right">
-                                    <h3 class="mb-1"> 8715 </h3>
-                                    <p class="text-muted mb-1">Online Orders</p>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
+                            </div><!-- end col -->
 
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card-box">
-                                <div class="float-left" dir="ltr">
-                                    <input data-plugin="knob" data-width="70" data-height="70" data-fgcolor="#7266ba" data-bgcolor="#ebeff2" value="77" data-skin="tron" data-angleoffset="0" data-readonly="true" data-thickness=".15">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card-box">
+                                    <div class="float-left" dir="ltr">
+                                        <input data-plugin="knob" data-width="70" data-height="70" data-fgcolor="red" data-bgcolor="#ebeff2" value="@(Model.StatusCounts[1].OrderCount * 100 / Model.totalStatusOrderCount)" data-skin="tron" data-angleoffset="0" data-readonly="true" data-thickness=".15">
+                                    </div>
+                                    <div class="text-right">
+                                        <h3 class="mb-1"> @Model.StatusCounts[1].OrderCount </h3>
+                                        <p class="text-muted mb-1">Đã hủy</p>
+                                    </div>
                                 </div>
-                                <div class="text-right">
-                                    <h3 class="mb-1"> $925.78 </h3>
-                                    <p class="text-muted mb-1">Revenue</p>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
+                            </div><!-- end col -->
 
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card-box">
-                                <div class="float-left" dir="ltr">
-                                    <input data-plugin="knob" data-width="70" data-height="70" data-fgcolor="#f672a7" data-bgcolor="#ebeff2" value="35" data-skin="tron" data-angleoffset="0" data-readonly="true" data-thickness=".15">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card-box">
+                                    <div class="float-left" dir="ltr">
+                                        <input data-plugin="knob" data-width="70" data-height="70" data-fgcolor="grey" data-bgcolor="#ebeff2" value="@(Model.StatusCounts[2].OrderCount * 100 / Model.totalStatusOrderCount)" data-skin="tron" data-angleoffset="0" data-readonly="true" data-thickness=".15">
+                                    </div>
+                                    <div class="text-right">
+                                        <h3 class="mb-1"> @Model.StatusCounts[2].OrderCount </h3>
+                                        <p class="text-muted mb-1">Đang chờ xác nhận</p>
+                                    </div>
                                 </div>
-                                <div class="text-right">
-                                    <h3 class="mb-1"> $78.58 </h3>
-                                    <p class="text-muted mb-1">Daily Average</p>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
+                            </div><!-- end col -->
+                        }
+                        else
+                        {
+                            <p>No data available</p>
+                        }
+
 
                     </div>
                     <!-- end row -->
 
                     <div class="row">
+                        <div class="col-xl-4">
+                            <div class="card-box">
+                                <div class="dropdown float-right">
+                                    <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="mdi mdi-dots-horizontal"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Settings</a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Download</a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Upload</a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                    </div>
+                                </div>
+
+                                <h4 class="header-title">Thống kê theo thể loại</h4>
+
+                                <div class="mt-3 text-center">
+                                    <p class="text-muted font-15 font-family-secondary mb-0">
+                                        <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-primary"></i> Màn hình</span>
+                                        <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-pink"></i> Tai nghe</span>
+                                        <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-muted"></i> Cây máy tính</span>
+                                        <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-purple"></i> Chuột</span>
+                                    </p>
+
+                                    <div id="sparkline3" class="text-center mt-3"></div>
+
+                                    <div class="row mt-3">
+                                        <div class="col-5">
+                                            <p class="text-muted font-15 mb-1 text-truncate">Màn hình</p>
+                                            <h4> $12,365</h4>
+                                        </div>
+                                        <div class="col-5">
+                                            <p class="text-muted font-15 mb-1 text-truncate">Tai nghe</p>
+                                            <h4><i class="fe-arrow-down text-danger"></i> $365</h4>
+                                        </div>
+                                        <div class="col-5">
+                                            <p class="text-muted font-15 mb-1 text-truncate">Chuột máy tính</p>
+                                            <h4> $8,501</h4>
+                                        </div>
+                                        <div class="col-5">
+                                            <p class="text-muted font-15 mb-1 text-truncate">Cây máy tính</p>
+                                            <h4> $8,501</h4>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> <!-- end card-box -->
+                        </div> <!-- end col -->
                         <div class="col-xl-4">
                             <div class="card-box">
                                 <div class="dropdown float-right">
@@ -176,53 +225,7 @@
                             </div> <!-- end card-box -->
                         </div> <!-- end col -->
 
-                        <div class="col-xl-4">
-                            <div class="card-box">
-                                <div class="dropdown float-right">
-                                    <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
-                                        <i class="mdi mdi-dots-horizontal"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item">Settings</a>
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item">Download</a>
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item">Upload</a>
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                    </div>
-                                </div>
 
-                                <h4 class="header-title">Weekly Sales Report</h4>
-
-                                <div class="mt-3 text-center">
-                                    <p class="text-muted font-15 font-family-secondary mb-0">
-                                        <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-primary"></i> Direct</span>
-                                        <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-pink"></i> Affilliate</span>
-                                        <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-muted"></i> Sponsored</span>
-                                    </p>
-
-                                    <div id="sparkline3" class="text-center mt-3"></div>
-
-                                    <div class="row mt-3">
-                                        <div class="col-4">
-                                            <p class="text-muted font-15 mb-1 text-truncate">Target</p>
-                                            <h4> $12,365</h4>
-                                        </div>
-                                        <div class="col-4">
-                                            <p class="text-muted font-15 mb-1 text-truncate">Last week</p>
-                                            <h4><i class="fe-arrow-down text-danger"></i> $365</h4>
-                                        </div>
-                                        <div class="col-4">
-                                            <p class="text-muted font-15 mb-1 text-truncate">Last Month</p>
-                                            <h4><i class="fe-arrow-up text-success"></i> $8,501</h4>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div> <!-- end card-box -->
-                        </div> <!-- end col -->
 
                     </div>
                     <!-- end row -->
@@ -583,4 +586,20 @@
         <!-- ============================================================== -->
 
     </div>
+    @using Newtonsoft.Json
+
+    <script type="text/javascript">
+    // Truyền dữ liệu từ viewModel vào JavaScript
+    var statusCounts = @Html.Raw(JsonConvert.SerializeObject(Model.StatusCounts));
+    var categoryCounts = @Html.Raw(JsonConvert.SerializeObject(Model.CategoryCounts));
+    var totalStatusOrderCount = @Model.totalStatusOrderCount;
+    var totalCategoryOrderCount = @Model.totalCategoryOrderCount;
+
+    // In ra console để kiểm tra
+    console.log(statusCounts);
+    console.log(categoryCounts);
+    console.log(totalStatusOrderCount);
+    console.log(totalCategoryOrderCount);
+    </script>
 </main>
+

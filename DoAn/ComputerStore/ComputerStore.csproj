@@ -247,7 +247,7 @@
     <Compile Include="Areas\Admin\Controllers\OrderItemsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductDetailsController.cs" />
     <Compile Include="Areas\User\Controllers\AccountController.cs" />
-    <Compile Include="Areas\User\Controllers\HomeUserController.cs" />
+    <Compile Include="Areas\User\Controllers\HomeController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -318,6 +318,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets_admin\js\pages\dashboards-1.init.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -368,7 +369,7 @@
     <Content Include="Areas\Admin\Views\ProductDetails\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Web.config" />
     <Content Include="Areas\User\Views\Web.config" />
-    <Content Include="Areas\User\Views\HomeUser\Index.cshtml" />
+    <Content Include="Areas\User\Views\Home\Index.cshtml" />
     <Content Include="Areas\User\Views\Account\Login.cshtml" />
     <Content Include="Areas\User\Views\Account\Register.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
@@ -1930,7 +1931,6 @@
     <Content Include="assets_admin\js\pages\chartjs.init.js" />
     <Content Include="assets_admin\js\pages\coming-soon.init.js" />
     <Content Include="assets_admin\js\pages\companies.js" />
-    <Content Include="assets_admin\js\pages\dashboard-1.init.js" />
     <Content Include="assets_admin\js\pages\dashboard-2.init.js" />
     <Content Include="assets_admin\js\pages\datatables.init.js" />
     <Content Include="assets_admin\js\pages\flot.init.js" />
@@ -2093,7 +2093,6 @@
     </Content>
     <Content Include="Areas\Admin\Views\Shared\Error.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
-    <Content Include="Areas\User\Views\Index.cshtml" />
     <Content Include="assets_user\css\style.css.map" />
     <Content Include="assets_user\css\style.scss" />
     <Content Include="assets_user\font\fonts\fontawesome-webfont.eot" />
@@ -2227,6 +2226,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets_user\image\Headphone\" />
+    <Folder Include="assets_user\image\Mouse\" />
+    <Folder Include="assets_user\image\PC\" />
+    <Folder Include="assets_user\image\Screen\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

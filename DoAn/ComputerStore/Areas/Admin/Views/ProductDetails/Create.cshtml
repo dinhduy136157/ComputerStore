@@ -97,6 +97,11 @@
                         <label class="control-label col-md-2">Thông số kỹ thuật</label>
                         <div class="col-md-10">
                             <div>
+                                <label>CHIP</label>
+                                <input type="hidden" name="SpectificationID" value="6" class="form-control" />
+                                <input type="text" name="SpecificationValue" class="form-control" />
+                            </div>
+                            <div>
                                 <label>RAM</label>
                                 <input type="text" name="Specifications[RAM]" class="form-control" />
                             </div>
@@ -112,6 +117,10 @@
                                 <label>Ổ cứng</label>
                                 <input type="text" name="Specifications[OCung]" class="form-control" />
                             </div>
+                            <div>
+                                <label>Vỏ Case</label>
+                                <input type="text" name="SpecificationsValue" class="form-control" />
+                            </div>
                         </div>
                     `);
                     break;
@@ -120,8 +129,24 @@
                         <label class="control-label col-md-2">Thông số kỹ thuật</label>
                         <div class="col-md-10">
                             <div>
+                                <label>Thương Hiệu</label>
+                                <input type="text" name="Specifications[KichThuoc]" class="form-control" />
+                            </div>
+                            <div>
                                 <label>Kích thước</label>
                                 <input type="text" name="Specifications[KichThuoc]" class="form-control" />
+                            </div>
+                            <div>
+                                <label>Tỷ lệ màn hình</label>
+                                <input type="text" name="Specifications[KichThuoc]" class="form-control" />
+                            </div>
+                            <div>
+                                <label>Độ phân giải</label>
+                                <input type="text" name="Specifications[KichThuoc]" class="form-control" />
+                            </div>
+                            <div>
+                                <label>Tấm nền</label>
+                                <input type="text" name="Specifications[TanSoQuet]" class="form-control" />
                             </div>
                             <div>
                                 <label>Tần số quét</label>
@@ -135,13 +160,25 @@
                         <label class="control-label col-md-2">Thông số kỹ thuật</label>
                         <div class="col-md-10">
                             <div>
+                                <label>Tên hãng</label>
+                                <input type="text" name="Specifications[KetNoi]" class="form-control" />
+                            </div>
+                            <div>
                                 <label>Kết nối</label>
+                                <input type="text" name="Specifications[DPI]" class="form-control" />
+                            </div>
+                            <div>
+                                <label>Chất liệu</label>
                                 <input type="text" name="Specifications[KetNoi]" class="form-control" />
                             </div>
                             <div>
                                 <label>DPI</label>
                                 <input type="text" name="Specifications[DPI]" class="form-control" />
                             </div>
+                             <div>
+                                 <label>Switch Omro</label>
+                                 <input type="text" name="Specifications[DPI]" class="form-control" />
+                             </div>
                         </div>
                     `);
                     break;
@@ -149,6 +186,10 @@
                     dynamicFields.append(`
                         <label class="control-label col-md-2">Thông số kỹ thuật</label>
                         <div class="col-md-10">
+                            <div>
+                                <label>Tên hãng</label>
+                                <input type="text" name="Specifications[KichThuoc]" class="form-control" />
+                            </div>
                             <div>
                                 <label>Kích thước</label>
                                 <input type="text" name="Specifications[KichThuoc]" class="form-control" />
