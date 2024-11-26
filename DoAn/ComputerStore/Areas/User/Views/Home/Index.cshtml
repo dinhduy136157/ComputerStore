@@ -1,117 +1,368 @@
-﻿
-@model ComputerStore.Areas.User.Controllers.HomeController.ProductDetailsViewModel
-
+﻿@model ComputerStore.Areas.User.Controllers.HomeController.ProductDetailsViewModel
 
 @{
     Layout = "~/Areas/User/Views/Shared/_LayoutUser.cshtml";
+    ViewBag.Title = "User Home Page";
 }
-<div class="content">
-    <div>
+<div class="">
+    <div class="header-full grid-full-width">
         <div class="header-content grid">
             <div class="grid__row row">
                 <ul class="catalog-list col-2">
+                    @*PC GVN*@
                     <li class="catalog-item">
                         <a href="#" class="catalog-item-link">
                             <i class="fas fa-laptop-code"></i>
                             <span class="catalog-name">
-                                PC Gaming
+                                PC GVN <i class="fas fa-chevron-right fa-pull-right"></i>
                             </span>
+
                         </a>
                         <div class="products-of-catalog">
                             <div class="product-catalog-container">
                                 <div class="product-of-catalog-content">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <div class="product-of-catalog-banner">
-                                    <a href="" class="product-of-catalog-link">
-                                        <img src="http://theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx2.png?v=19077"
-                                             alt="">
-                                    </a>
+                                    <span class="product-of-catalog-content-name">
+                                        KHUYẾN MÃI HOT
+                                        <a class="product-of-catalog-content-items" href="https://youtube.com">PC RX6600 tặng 8GB RAM</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC GTX1650 tặng 8GB RAM</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        PC KHUYẾN MÃI
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Dragon ACE 4080 Super</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Dragon X 4070 Super</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Project Vertical</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Project Zero White</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        PC KHUYẾN MÃI
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">BTF i9 - 4090</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">BTF i7 - 4070Ti Super</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">BTF i5 - 4070 Super</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">i5-4060</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">i5 - 4060Ti</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        PC theo cấu hình (Intel)
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC i3 (Giá chỉ từ 7 triệu)</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC i5 (Giá chỉ từ 10 triệu)</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC i7 (Giá chỉ từ 27 triệu)</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC i9 (Giá chỉ từ 40 triệu)</a>
+                                        <a class="product-of-catalog-content-items text-bold" href="https:youtube.com">Xem tất cả PC</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        PC theo cấu hình (AMD)
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC R3 (Giá chỉ từ 5 triệu)</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC R5 (Giá chỉ từ 7 triệu)</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC R7 (Giá chỉ từ 37 triệu)</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC R9 (Giá chỉ từ 40 triệu)</a>
+                                        <a class="product-of-catalog-content-items text-bold" href="https:youtube.com">Xem tất cả PC</a>
+
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        PC văn phòng
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Homework Athlon - Giá chỉ 3.990k</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Homework R3 - Gia chỉ 5,690k</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Homework R5 - Gia chỉ 5,690k</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Homework 15 - Gia chỉ 5,690k</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        PC theo cấu hình VGA
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA 1650</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA 3050</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA 3060</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA RX 6600</a>
+                                        <a class="product-of-catalog-content-items text-bold" href="https:youtube.com">Xem tất cả PC GVN</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        PC theo cấu hình VGA
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA 4060</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA 4070</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA 4080</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA 4090</a>
+                                        <a class="product-of-catalog-content-items text-bold" href="https:youtube.com">Xem tất cả PC GVN</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Phần mềm bàn quyền
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">
+                                            Windows bản quyền - Chỉ từ 2.990K
+                                        </a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">
+                                            Office 365 bản quyền - Chỉ từ 990K
+                                        </a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        A.I PC - GVN
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Asus Intelligence PC x GVN</a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </li>
-
+                    @*Màn hình*@
                     <li class="catalog-item">
                         <a href="#" class="catalog-item-link">
                             <i class="fas fa-desktop"></i>
                             <span class="catalog-name">
-                                Màn Hình
+                                Màn hình <i class="fas fa-chevron-right fa-pull-right"></i>
                             </span>
                         </a>
                         <div class="products-of-catalog">
                             <div class="product-catalog-container">
                                 <div class="product-of-catalog-content">
-                                    <span>âa</span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <div class="product-of-catalog-banner">
-                                    <a href="" class="product-of-catalog-link">
-                                        <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx6.png?v=19077"
-                                             alt="">
-                                    </a>
+                                    <span class="product-of-catalog-content-name">
+                                        Hãng sản xuất
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">LG</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Asus</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">ViewSonic</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Gigabyte</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">AOC</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Acer</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">HKC</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Hãng sản xuất
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">MSI</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Lenovo</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Samsung</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Philips</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">LC-Power</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">E-Dra</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Dahua</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Giá bán
+                                        <a class="product-of-catalog-content-items" href="#">Dưới 5 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="#">Từ 5 triệu đến 10 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="#">Từ 10 triệu đến 20 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="#">Từ 20 triệu đến 30 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="#">Trên 30 triệu</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Độ phân giải
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình Full HD</a>
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình 2K 1440p</a>
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình 4K UHD</a>
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình 6K</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Tần số quét
+                                        <a class="product-of-catalog-content-items" href="#">60Hz</a>
+                                        <a class="product-of-catalog-content-items" href="#">75Hz</a>
+                                        <a class="product-of-catalog-content-items" href="#">100Hz</a>
+                                        <a class="product-of-catalog-content-items" href="#">144Hz</a>
+                                        <a class="product-of-catalog-content-items" href="#">240Hz</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Màn hình cong
+                                        <a class="product-of-catalog-content-items" href="#">24" Curved</a>
+                                        <a class="product-of-catalog-content-items" href="#">27" Curved</a>
+                                        <a class="product-of-catalog-content-items" href="#">32" Curved</a>
+                                        <a class="product-of-catalog-content-items" href="#">Trên 32" Curved</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Kích thước
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình 22"</a>
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình 24"</a>
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình 27"</a>
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình 29"</a>
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình 32"</a>
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình trên 32"</a>
+                                        <a class="product-of-catalog-content-items" href="#">Hỗ trợ giá treo (VESA)</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Màn hình đồ họa
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình đồ họa 24"</a>
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình đồ họa 27"</a>
+                                        <a class="product-of-catalog-content-items" href="#">Màn hình đồ họa 32"</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Phụ kiện màn hình
+                                        <a class="product-of-catalog-content-items" href="#">Giá treo màn hình</a>
+                                        <a class="product-of-catalog-content-items" href="#">Phụ kiện dây HDMI, DP, LAN</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Màn hình di động
+                                        <a class="product-of-catalog-content-items" href="#">Full HD 1080p</a>
+                                        <a class="product-of-catalog-content-items" href="#">2K 1440p</a>
+                                        <a class="product-of-catalog-content-items" href="#">Có cảm ứng</a>
+
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Máy chiếu
+                                        <a class="product-of-catalog-content-items" href="#">Máy chiếu Asus</a>
+                                        <a class="product-of-catalog-content-items" href="#">Máy chiếu Beecube</a>
+                                        <a class="product-of-catalog-content-items" href="#">Máy chiếu Wanbo</a>
+                                        <a class="product-of-catalog-content-items" href="#">Máy chiếu ViewSonic</a>
+
+                                    </span>
+
                                 </div>
                             </div>
                         </div>
                     </li>
+                    @*Bàn phím*@
+                    <li class="catalog-item">
+                        <a href="#" class="catalog-item-link">
+                            <i class="far fa-keyboard"></i>
+                            <span class="catalog-name">
+                                Bàn phím <i class="fas fa-chevron-right fa-pull-right"></i>
+                            </span>
+                        </a>
+                        <div class="products-of-catalog">
+                            <div class="product-catalog-container">
+                                <div class="product-of-catalog-content">
+                                    <span class="product-of-catalog-content-name">
+                                        Thương hiệu
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">AKKO</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Dare-U</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Rapoo</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">FL-Esports</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Corsair</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">E-Dra</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Cidoo</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Thương hiệu
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Asus</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Logitech</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Razer</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Leopoid</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Steelseries</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Durgod</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">VNG</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Giá tiền
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Dưới 1 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Từ 1 triệu đến 2 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Từ 2 triệu đến 3 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Từ 3 triệu đến 4 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Trên 4 triệu</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Kết nối
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Bluetooth</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Wireless</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Phụ kiện bàn phím cơ
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Keycaps</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Dwarf Factory</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Kê tay</a>
+                                    </span>
 
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    @*Chuột*@
                     <li class="catalog-item">
                         <a href="#" class="catalog-item-link">
                             <i class="fas fa-mouse"></i>
                             <span class="catalog-name">
-                                Chuột
+                                Chuột <i class="fas fa-chevron-right fa-pull-right"></i>
                             </span>
                         </a>
                         <div class="products-of-catalog">
                             <div class="product-catalog-container">
                                 <div class="product-of-catalog-content">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <div class="product-of-catalog-banner">
-                                    <a href="" class="product-of-catalog-link">
-                                        <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx8.png?v=19077"
-                                             alt="">
-                                    </a>
+                                    <span class="product-of-catalog-content-name">
+                                        Thương hiệu chuột
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Logitech</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Razer</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Corsair</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Pulsar</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Microsoft</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Thương hiệu chuột
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Asus</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Steelseries</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Glorious</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Rapoo</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Giá tiền
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Dưới 500 nghìn</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Từ 500 nghìn đến 1 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Từ 1 triệu đến 2 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Trên 2 triệu đến 3 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Trên 3 triệu</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Loại chuột
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Chuột gaming</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Chuột văn phòng</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Thương hiệu lót chuột
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">GEARVN</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Asus</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Steelseries</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Dare-U</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Razer</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Loại lót chuột
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Mềm</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Cứng</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Dày</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Mỏng</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Có viền led</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Lót chuột theo size
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Nhỏ</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Vừa</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Lớn</a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </li>
+                    @*Tai nghe*@
                     <li class="catalog-item">
                         <a href="#" class="catalog-item-link">
                             <i class="fas fa-headphones-alt"></i>
                             <span class="catalog-name">
-                                Tai Nghe Gaming
+                                Tai nghe <i class="fas fa-chevron-right fa-pull-right"></i>
                             </span>
                         </a>
                         <div class="products-of-catalog">
                             <div class="product-catalog-container">
                                 <div class="product-of-catalog-content">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <div class="product-of-catalog-banner">
-                                    <a href="" class="product-of-catalog-link">
-                                        <img src="//theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx9.png?v=19077"
-                                             alt="">
-                                    </a>
+                                    <span class="product-of-catalog-content-name">
+                                        Thương hiệu
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Asus</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">HyperX</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Corsair</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Razer</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Thương hiệu
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Steelseries</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Rapoo</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Logitech</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Edifier</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Giá bán
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Dưới 1 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Từ 1 triệu đến 2 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Từ 2 đến 3 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Từ 3 đến 4 triệu</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Trên 4 triệu</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Kiểu kết nối
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Wireless</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Bluetooth</a>
+                                    </span>
+                                    <span class="product-of-catalog-content-name">
+                                        Kiểu tai nghe
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Over-ear</a>
+                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Gaming In-ear</a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -259,7 +510,7 @@
                             </div>
                         </div>
                     }
-                    
+
                 </div>
             </div>
             <div class="product-content">
@@ -353,3 +604,8 @@
         </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="~/assets_user/renderlist.js"></script>
+<script src="~/assets_user/slider.js"></script>

@@ -1,0 +1,6 @@
+﻿26/11/2024 (Lỗi gì alo tôi nếu k fix được)
+- Sửa menu ở home page
+- Thêm onClick menu vào Layout để sử dụng lại trong nhiều page
+- Thêm template: Nice Admin để code tiếp giao diện
+- Cấu hình TypeScript để không bị lỗi template
+- Thêm Microsoft.TypeScript.MsBuild trên Nuget vào project
