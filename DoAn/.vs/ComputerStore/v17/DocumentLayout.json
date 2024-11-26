@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|f:\\mydata\\document_volumef\\7th_semester\\professionalproject\\myteam\\code-dacn\\dinhduy136157\\computerstore\\doan\\computerstore\\nguyenhuuduy_codenote.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\nguyenhuuduy_codenote.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|f:\\mydata\\document_volumef\\7th_semester\\professionalproject\\myteam\\code-dacn\\dinhduy136157\\computerstore\\doan\\computerstore\\areas\\user\\views\\testproductdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\views\\testproductdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|f:\\mydata\\document_volumef\\7th_semester\\professionalproject\\myteam\\code-dacn\\dinhduy136157\\computerstore\\doan\\computerstore\\areas\\user\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|f:\\mydata\\document_volumef\\7th_semester\\professionalproject\\myteam\\code-dacn\\dinhduy136157\\computerstore\\doan\\computerstore\\areas\\user\\views\\shared\\_layoutuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\views\\shared\\_layoutuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|f:\\mydata\\document_volumef\\7th_semester\\professionalproject\\myteam\\code-dacn\\dinhduy136157\\computerstore\\doan\\computerstore\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|f:\\mydata\\document_volumef\\7th_semester\\professionalproject\\myteam\\code-dacn\\dinhduy136157\\computerstore\\doan\\computerstore\\assets_user\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\assets_user\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|f:\\mydata\\document_volumef\\7th_semester\\professionalproject\\myteam\\code-dacn\\dinhduy136157\\computerstore\\doan\\computerstore\\assets_user\\css\\nhd-css.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\assets_user\\css\\nhd-css.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,92 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NguyenHuuDuy_CodeNote.txt",
-              "DocumentMoniker": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\NguyenHuuDuy_CodeNote.txt",
-              "RelativeDocumentMoniker": "ComputerStore\\NguyenHuuDuy_CodeNote.txt",
-              "ToolTip": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\NguyenHuuDuy_CodeNote.txt",
-              "RelativeToolTip": "ComputerStore\\NguyenHuuDuy_CodeNote.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-26T08:14:00.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "tsconfig.json",
-              "DocumentMoniker": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\tsconfig.json",
-              "RelativeDocumentMoniker": "ComputerStore\\tsconfig.json",
-              "ToolTip": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\tsconfig.json",
-              "RelativeToolTip": "ComputerStore\\tsconfig.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-26T08:08:53.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "style.css",
-              "DocumentMoniker": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\assets_user\\css\\style.css",
-              "RelativeDocumentMoniker": "ComputerStore\\assets_user\\css\\style.css",
-              "ToolTip": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\assets_user\\css\\style.css",
-              "RelativeToolTip": "ComputerStore\\assets_user\\css\\style.css",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACEAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-26T07:46:03.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NHD-css.css",
-              "DocumentMoniker": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\assets_user\\css\\NHD-css.css",
-              "RelativeDocumentMoniker": "ComputerStore\\assets_user\\css\\NHD-css.css",
-              "ToolTip": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\assets_user\\css\\NHD-css.css",
-              "RelativeToolTip": "ComputerStore\\assets_user\\css\\NHD-css.css",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAJsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-26T07:23:07.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_LayoutUser.cshtml",
-              "DocumentMoniker": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\Shared\\_LayoutUser.cshtml",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\User\\Views\\Shared\\_LayoutUser.cshtml",
-              "ToolTip": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\Shared\\_LayoutUser.cshtml",
-              "RelativeToolTip": "ComputerStore\\Areas\\User\\Views\\Shared\\_LayoutUser.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T06:44:31.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\User\\Views\\Home\\Index.cshtml",
-              "ToolTip": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "ComputerStore\\Areas\\User\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAKgBAAAAAAAAAAAAAGICAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T06:38:18.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\TestProductDetails\\Index.cshtml",
               "RelativeDocumentMoniker": "ComputerStore\\Areas\\User\\Views\\TestProductDetails\\Index.cshtml",
               "ToolTip": "F:\\MyData\\Document_VolumeF\\7th_Semester\\ProfessionalProject\\MyTeam\\Code-DACN\\dinhduy136157\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\TestProductDetails\\Index.cshtml",
               "RelativeToolTip": "ComputerStore\\Areas\\User\\Views\\TestProductDetails\\Index.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAADwv10AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T06:37:01.419Z",
+              "WhenOpened": "2024-11-26T11:02:53.318Z",
               "EditorCaption": ""
             }
           ]
