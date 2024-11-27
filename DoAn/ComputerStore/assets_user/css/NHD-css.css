@@ -5,6 +5,14 @@
     margin-bottom: 2px;
 }
 
+.m-font-size-12 {
+    font-size: 12px;
+}
+
+.m-font-size-14 {
+    font-size: 14px;
+}
+
 .text-bold {
     font-weight: bold !important;
 }
@@ -153,3 +161,148 @@
     min-height: 53px;
 }
 
+/*#region Product Details Page*/
+.m-product-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.m-product-rating {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.m-rating-star {
+    color: orange;
+}
+
+.m-product-price {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+    .m-product-price .m-origin-price {
+        font-size: 30px;
+        font-weight: 400;
+        color: red;
+    }
+
+    .m-product-price .m-discount-price {
+        font-size: 20px;
+        font-weight: 200;
+        text-decoration: line-through;
+        color: gray;
+    }
+
+    .m-product-price .m-discount-percent {
+        font-size: 14px;
+        font-weight: 200;
+        color: red;
+        border: 1px solid red;
+        padding: 4px;
+        border-radius: 6px;
+    }
+
+.product-gift {
+    margin: 10px 0px 10px 0px;
+    border: 1px solid #FFD9D9;
+    border-radius: 4px;
+}
+
+.box-header {
+    background-color: #FFD9D9;
+    padding: 5px 15px;
+}
+
+.gift-info {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px 10px;
+    align-items: center;
+}
+
+.rouded-number {
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    color: white;
+}
+
+.list-gift:hover {
+    text-decoration: underline;
+}
+
+.btn-buynow {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: red;
+    align-items: center;
+    padding: 8px 40px;
+}
+
+    .btn-buynow .maintext {
+        font-weight: 600;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .btn-buynow .subtext {
+    }
+
+.increase, .decrease {
+    width: 25px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: none;
+}
+
+.sm-rouded-img {
+    width: 110px;
+    border-radius: 5px;
+    /*    border: 1px solid black;*/
+}
+
+.related-product {
+    font-size: 12px;
+}
+
+    .related-product .m-product-price .m-origin-price {
+        font-size: 14px;
+        font-weight: 400;
+        color: red;
+    }
+
+    .related-product .m-discount-price {
+        font-size: 12px;
+        font-weight: 200;
+        text-decoration: line-through;
+        color: gray;
+    }
+
+    .related-product .m-product-price .m-discount-percent {
+        font-size: 12px;
+        font-weight: 200;
+        color: red;
+        border: 1px solid red;
+        padding: 4px;
+        border-radius: 6px;
+    }
+
+.fa-heart {
+    color: orange !important;
+}
+
+.fa-heart:hover {
+    cursor: pointer !important;
+    color: red !important;
+}
+/*#endregion*/
