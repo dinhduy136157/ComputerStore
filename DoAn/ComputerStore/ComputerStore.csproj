@@ -321,6 +321,8 @@
   <ItemGroup>
     <Content Include="assets_admin\js\pages\dashboards-1.init.js" />
     <Content Include="assets_user\css\NHD-css.css" />
+    <Content Include="assets_user\image\NHD-Images\pc-2.png" />
+    <Content Include="assets_user\NHD-js\quantity-check.js" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\css\style.css" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\img\apple-touch-icon.png" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\img\card.jpg" />
