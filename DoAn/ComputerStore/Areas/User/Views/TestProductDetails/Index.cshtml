@@ -1,0 +1,495 @@
+﻿
+@{
+    ViewBag.Title = "Index Product Details";
+    Layout = "~/Areas/User/Views/Shared/_LayoutUser.cshtml";
+}
+
+<head>
+    <!--#region NiceAdmin Template-->
+    <!-- Vendor CSS Files -->
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+
+    <!-- Template Main CSS File -->
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/css/style.css" rel="stylesheet">
+    <!--#endregion-->
+
+    <link rel="stylesheet" href="~/assets_user/css/NHD-css.css" /><!--NgHuuDuy css file modify-->
+
+</head>
+
+<div class="my-container dashboard">
+    <div class="pagetitle">
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index", "TestView")">Home</a></li>
+                <li class="breadcrumb-item active">Catalog Name</li>
+                <li class="breadcrumb-item active">Product Details Page</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <div class="container">
+        <div class="row product-general-info">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">With controls</h5>
+
+                        <!-- Slides with controls -->
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/assets_user/NiceAdmin/NiceAdmin/assets/img/slides-1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/assets_user/NiceAdmin/NiceAdmin/assets/img/slides-2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/assets_user/NiceAdmin/NiceAdmin/assets/img/slides-3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+
+                        </div><!-- End Slides with controls -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <!-- Default Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="m-product-info">
+                            <div class="m-info-top">
+                                <h5 class="m-product-name">Product Name<i class="far fa-heart fa-pull-right"></i></h5><!--Wishlist Click-->
+                                <div class="m-product-rating">
+                                    <span class="m-rating-star">
+                                        0.0 <i class="fas fa-star"></i>
+                                    </span>
+                                    <span><a href="#">Xem đánh giá</a></span>
+                                </div>
+                            </div>
+                            <div class="m-info-bottom">
+                                <div class="m-product-price">
+                                    <div class="m-origin-price">
+                                        32.990.000₫
+                                    </div>
+                                    <div class="m-discount-price">33.320.000₫</div>
+                                    <div class="m-discount-percent">1%</div>
+                                </div>
+                                <div class="product-gift">
+                                    <div class="box-header text-danger">
+                                        <i class="fas fa-gift"></i>
+                                        <span>Quà tặng khuyến mãi</span>
+                                    </div>
+                                    <div class="gift-info text-danger">
+                                        <ul style="padding-left: 0 !important;">
+                                            <li>
+                                                <span class="rouded-number">1</span>
+                                                <span class="list-gift"><a href="#">Tặng ngay 1 x Tản nhiệt AIO Corsair iCUE LINK TITAN 240 RX RGB WHITE (CW-9061020-WW) trị giá 3.990.000₫</a></span>
+                                            </li>
+                                            <!--Add more gift here-->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row gap-3 m-2 p-2">
+                                    <div>Số lượng</div>
+                                    <div>
+                                        <button class="decrease" id="decrease">-</button>
+                                        <!--Validate product quantity here-->
+                                        <input id="quantity" type="number" class="text-danger text-center pl-1" size="10" value="0" min="0" max="10" />
+                                        <button class="increase" id="increase">+</button>
+                                    </div>
+                                    <div>50 sản phẩm có sẵn</div>
+                                </div>
+                                <div id="error" class="alert alert-warning alert-dismissible fade show" style="display:none;" role="alert">
+                                    <i class="bi bi-exclamation-triangle me-1"></i>
+                                    Vượt quá số lượng cho phép!
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                                <div class="d-flex flex-row gap-3">
+                                    <button type="button" class="btn btn-outline-danger">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-buynow">
+                                        <span class="maintext">MUA NGAY</span>
+                                        <span class="subtext">Giao tận nơi hoặc nhận tại cửa hảng</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Default Card -->
+            </div>
+        </div>
+
+        <div class="row product-details">
+            <div class="col-lg-7">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="font-weight-bold h4 p-2 pt-3">Thông số kỹ thuật</div>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <!--Use foreach to generate table data-->
+                                    <th scope="row">Mainboard</th>
+                                    <td scope="row">GIGABYTE B760M AORUS ELITE AX DDR5</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">CPU</th>
+                                    <td scope="row">Intel Core i5 14600KF / Turbo up to 5.3GHz / 14 Nhân 20 Luồng / 24MB / LGA 1700</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">RAM</th>
+                                    <td scope="row">Corsair Vengeance RGB White 32GB (2x16GB) 5600 DDR5</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">VGA</th>
+                                    <td scope="row">GIGABYTE GeForce RTX 4060 Ti AERO OC 8G (GV-N406TAERO-OC-8GD)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">HDD</th>
+                                    <td scope="row">Có thể tùy chọn Nâng cấp</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">SSD</th>
+                                    <td scope="row">WD Black SN770 500G M.2 NVMe PCIe Gen4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">PSU</th>
+                                    <td scope="row">Corsair CX750 - 80 Plus Bronze (750W)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Case</th>
+                                    <td scope="row">Corsair 3500X TG Mid Tower White (CC-9011277-WW)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Quạt</th>
+                                    <td scope="row">Bộ 3 quạt Corsair RS120 ARGB WHITE</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card product-feedback-rating">
+                    <div class="h4 p-4 pb-0 font-weight-bold">Product Feedback & Rating Product Name Here</div>
+                    <div class="card-body">
+
+                        <div class="card-body">
+                            <h5 class="card-title m-rating-star">
+                                4.2
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <a href="#" class="m-font-size-14">80 đánh giá</a>
+                            </h5>
+
+                            <div class="d-flex flex-row align-items-center m-font-size-12">
+                                <div>
+                                    <p>5 <i class="fas fa-star"></i></p>
+                                    <p>4 <i class="fas fa-star"></i></p>
+                                    <p>3 <i class="fas fa-star"></i></p>
+                                    <p>2 <i class="fas fa-star"></i></p>
+                                    <p>1 <i class="fas fa-star"></i></p>
+                                </div>
+                                <div class="card-body  pt-2">
+                                    <!-- Default Progress Bars-->
+                                    <div class="progress">
+                                        <div class="progress-bar text-bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="progress mt-3">
+                                        <div class="progress-bar text-bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="progress mt-3">
+                                        <div class="progress-bar text-bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="progress mt-3">
+                                        <div class="progress-bar text-bg-warning" role="progressbar" style="width: 65%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="progress mt-3">
+                                        <div class="progress-bar text-bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <!-- End Default Progress Bars-->
+                                </div>
+                                <div>
+                                    <p>25%</p>
+                                    <p>25%</p>
+                                    <p>25%</p>
+                                    <p>25%</p>
+                                    <p>25%</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex flex-row gap-4 justify-content-center align-items-center">
+                            <img class="sm-rouded-img" src="~/assets_user/image/NHD-Images/pc-2.png" alt="Product Image" />
+                            <img class="sm-rouded-img" src="~/assets_user/image/NHD-Images/pc-2.png" alt="Product Image" />
+                            <img class="sm-rouded-img" src="~/assets_user/image/NHD-Images/pc-2.png" alt="Product Image" />
+                            <img class="sm-rouded-img" src="~/assets_user/image/NHD-Images/pc-2.png" alt="Product Image" />
+                            <a href="#" class="text-center">Xem thêm ảnh từ khách hàng</a>
+                        </div>
+                        <ul class="list-group list-group-flush pt-3">
+                            <!--Load some comment here, use foreach to load every li elements-->
+                            <li class="d-flex flex-column list-group-item">
+                                <div class="font-weight-bold">Đoàn Ngọc Ánh Linh</div>
+                                <div class="m-rating-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="m-font-size-14">
+                                    Chuột dùng được vài tháng đã bắt đầu liệt nút bấm mạnh mới được. Mình muốn bảo hành thì như nào ạ
+                                </div>
+                            </li>
+                            <li class="d-flex flex-column list-group-item">
+                                <div class="font-weight-bold">Đoàn Ngọc Ánh Linh</div>
+                                <div class="m-rating-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="m-font-size-14">
+                                    Chuột dùng được vài tháng đã bắt đầu liệt nút bấm mạnh mới được. Mình muốn bảo hành thì như nào ạ đsấđsakjákkadskjsdkj
+                                    Chuột dùng được vài tháng đã bắt đầu liệt nút bấm mạnh mới được. Mình muốn bảo hành thì như nào ạ
+                                </div>
+                            </li>
+                            <li class="d-flex flex-column list-group-item">
+                                <div class="font-weight-bold">Đoàn Ngọc Ánh Linh</div>
+                                <div class="m-rating-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="m-font-size-14">
+                                    Chuột dùng được vài tháng đã bắt đầu liệt nút bấm mạnh mới được. Mình muốn bảo hành thì như nào ạ
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="card-body pt-3">
+                            <!-- Basic Modal -->
+                            <div class=" d-flex flex-row justify-content-center gap-2">
+                                <button type="button" class="btn btn-outline-primary" style="width: 50%;">Xem thêm 10 đánh giá</button>
+                                <button type="button" class="btn btn-primary" style="width: 50%;" data-bs-toggle="modal" data-bs-target="#basicModal">
+                                    Viết đánh giá
+                                </button>
+                            </div>
+
+                            <div class="modal fade" id="basicModal" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">ĐÁNH GIÁ SẢN PHẨM</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="pt-2" id="ratingForm" method="post" action="@Url.Action("Index", "Home")"><!--Link to button with id-->
+                                                <div class="row mb-3">
+                                                    <label class="col-sm-2">Đánh giá</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-floating mb-3">
+                                                            <select class="form-select m-rating-star" id="floatingSelect" aria-label="Floating label select example">
+                                                                <option selected>5 sao</option>
+                                                                <option>4 sao</option>
+                                                                <option>3 sao</option>
+                                                                <option>2 sao</option>
+                                                                <option>1 sao</option>
+                                                            </select>
+                                                            <label for="floatingSelect">Đánh giá</label>
+                                                        </div>
+                                                        <div class="form-floating mb-3">
+                                                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px;"></textarea>
+                                                            <label for="floatingTextarea">Bình luận</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="inputNumber" class="col-sm-2">Tải ảnh lên</label>
+                                                    <div class="col-sm-10">
+                                                        <input class="form-control" type="file" id="formFile">
+                                                    </div>
+                                                </div>
+                                                <div class="fa-pull-right">(tối đa 1 ảnh)</div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary fa-pull-right" form="ratingForm">Gửi đánh giá</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End Basic Modal-->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card p-2">
+                    <h4 class="p-1">
+                        Sản phẩm tương tự
+                    </h4>
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td><img class="sm-rouded-img" src="~/assets_user/image/NHD-Images/pc-2.png" alt="Product Image" /></td>
+                                <td class="related-product">
+                                    <h6>PC GVN x Corsair iCUE (Intel i5-14600KF/ VGA RTX 4060 Ti)</h6>
+                                    <div class="m-discount-price">33.320.000₫</div>
+                                    <div class="m-product-price">
+                                        <div class="m-origin-price">
+                                            32.990.000₫
+                                        </div>
+                                        <div class="m-discount-percent">1%</div>
+                                    </div>
+                                    <div class="m-product-rating">
+                                        <span class="m-rating-star">
+                                            0.0 <i class="fas fa-star"></i>
+                                        </span>
+                                        <span><a href="#">(0) đánh giá</a></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="sm-rouded-img" src="~/assets_user/image/NHD-Images/pc-2.png" alt="Product Image" /></td>
+                                <td class="related-product">
+                                    <h6>PC GVN x Corsair iCUE (Intel i5-14600KF/ VGA RTX 4060 Ti)</h6>
+                                    <div class="m-discount-price">33.320.000₫</div>
+                                    <div class="m-product-price">
+                                        <div class="m-origin-price">
+                                            32.990.000₫
+                                        </div>
+                                        <div class="m-discount-percent">1%</div>
+                                    </div>
+                                    <div class="m-product-rating">
+                                        <span class="m-rating-star">
+                                            0.0 <i class="fas fa-star"></i>
+                                        </span>
+                                        <span><a href="#">(0) đánh giá</a></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="sm-rouded-img" src="~/assets_user/image/NHD-Images/pc-2.png" alt="Product Image" /></td>
+                                <td class="related-product">
+                                    <h6>PC GVN x Corsair iCUE (Intel i5-14600KF/ VGA RTX 4060 Ti)</h6>
+                                    <div class="m-discount-price">33.320.000₫</div>
+                                    <div class="m-product-price">
+                                        <div class="m-origin-price">
+                                            32.990.000₫
+                                        </div>
+                                        <div class="m-discount-percent">1%</div>
+                                    </div>
+                                    <div class="m-product-rating">
+                                        <span class="m-rating-star">
+                                            0.0 <i class="fas fa-star"></i>
+                                        </span>
+                                        <span><a href="#">(0) đánh giá</a></span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <div class="filter">
+                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                            <li class="dropdown-header text-start">
+                                <h6>Filter</h6>
+                            </li>
+
+                            <li><a class="dropdown-item" href="#">Today</a></li>
+                            <li><a class="dropdown-item" href="#">This Month</a></li>
+                            <li><a class="dropdown-item" href="#">This Year</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card-body pb-0">
+                        <h5 class="card-title">News &amp; Updates <span>| Today</span></h5>
+                        <div class="news">
+                            <div class="post-item clearfix">
+                                <img src="~/assets_user/NiceAdmin/NiceAdmin/assets/img/news-1.jpg" alt="">
+                                <h4><a href="#">Nihil blanditiis at in nihil autem</a></h4>
+                                <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
+                            </div>
+
+                            <div class="post-item clearfix">
+                                <img src="~/assets_user/NiceAdmin/NiceAdmin/assets/img/news-2.jpg" alt="">
+                                <h4><a href="#">Quidem autem et impedit</a></h4>
+                                <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...</p>
+                            </div>
+
+                            <div class="post-item clearfix">
+                                <img src="~/assets_user/NiceAdmin/NiceAdmin/assets/img/news-3.jpg" alt="">
+                                <h4><a href="#">Id quia et et ut maxime similique occaecati ut</a></h4>
+                                <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...</p>
+                            </div>
+
+                            <div class="post-item clearfix">
+                                <img src="~/assets_user/NiceAdmin/NiceAdmin/assets/img/news-4.jpg" alt="">
+                                <h4><a href="#">Laborum corporis quo dara net para</a></h4>
+                                <p>Qui enim quia optio. Eligendi aut asperiores enim repellendusvel rerum cuder...</p>
+                            </div>
+
+                            <div class="post-item clearfix">
+                                <img src="~/assets_user/NiceAdmin/NiceAdmin/assets/img/news-5.jpg" alt="">
+                                <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>
+                                <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos eius...</p>
+                            </div>
+
+                        </div><!-- End sidebar recent posts-->
+
+                    </div>
+                </div><!-- End News & Updates -->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--#region Script-->
+<!-- Vendor JS Files -->
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+@*<script src="assets/vendor/chart.js/chart.umd.js"></script>*@
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/echarts/echarts.min.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/quill/quill.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/js/main.js"></script>
+<!--#endregion Script-->
+<!--Quantity check-->
+<script src="~/assets_user/NHD-js/quantity-check.js"></script>

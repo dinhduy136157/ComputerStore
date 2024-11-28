@@ -1,0 +1,18 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "ES6",
+    "outDir": "wwwroot/js"
+  },
+  "include": [
+    "assets_user/NiceAdmin/NiceAdmin/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "assets_user/NiceAdmin/NiceAdmin/assets/vendor/chart.js"
+  ]
+}

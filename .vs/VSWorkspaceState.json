@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DoAn",
+    "\\DoAn\\ComputerStore",
+    "\\DoAn\\ComputerStore\\Areas",
+    "\\DoAn\\ComputerStore\\Areas\\User",
+    "\\DoAn\\ComputerStore\\Areas\\User\\Views",
+    "\\DoAn\\ComputerStore\\Areas\\User\\Views\\Home"
   ],
-  "SelectedNode": "\\ComputerStore.sln",
+  "SelectedNode": "\\DoAn\\ComputerStore\\Areas\\User\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
