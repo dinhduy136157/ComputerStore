@@ -4,3 +4,6 @@
 - Thêm template: Nice Admin để code tiếp giao diện
 - Cấu hình TypeScript để không bị lỗi template
 - Thêm Microsoft.TypeScript.MsBuild trên Nuget vào project
+
+29/11/2024
+- Tôi nhấn fetch xong nó lỗi git tùm lum, không merge, pull được nên tôi phải clone lại cái mới @@
