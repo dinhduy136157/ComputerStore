@@ -4,10 +4,10 @@
     "\\DoAn",
     "\\DoAn\\ComputerStore",
     "\\DoAn\\ComputerStore\\Areas",
-    "\\DoAn\\ComputerStore\\Areas\\User",
-    "\\DoAn\\ComputerStore\\Areas\\User\\Views",
-    "\\DoAn\\ComputerStore\\Areas\\User\\Views\\Home"
+    "\\DoAn\\ComputerStore\\Areas\\Admin",
+    "\\DoAn\\ComputerStore\\Areas\\Admin\\Views",
+    "\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Home"
   ],
-  "SelectedNode": "\\DoAn\\ComputerStore\\Areas\\User\\Views\\Home\\Index.cshtml",
+  "SelectedNode": "\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
