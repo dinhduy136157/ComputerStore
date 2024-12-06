@@ -34,13 +34,12 @@ namespace ComputerStore.Areas.User.Controllers
                     ViewBag.Error = "Vui lòng điền đầy đủ email và mật khẩu";
                     return View();
                 }
-                string hashedPassword = GetSHA256Hash(password);
-                var user = db.Users.FirstOrDefault(u => u.Email == email && u.Password == hashedPassword);
+                var user = db.Users.FirstOrDefault(u => u.Email == email && u.Password == password);
                 if (user != null)
                 {
                     Session["UserID"] = user.UserID;
                     Session["UserName"] = user.UserName;
-                    return RedirectToAction("Index", "HomeUser");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
@@ -66,15 +65,13 @@ namespace ComputerStore.Areas.User.Controllers
 
                 if (existingUser == null)
                 {
-                    newuser.Password = HashPassword(newuser.Password);
-                    
                     db.Users.Add(newuser);
                     db.SaveChanges();
 
                     
                     Session["UserID"] = newuser.UserID;
                     Session["UserName"] = newuser.UserName;
-                    return RedirectToAction("Index", "HomeUser");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
@@ -88,32 +85,6 @@ namespace ComputerStore.Areas.User.Controllers
         {
             Session.Clear();
             return RedirectToAction("Login", "Account");
-        }
-        private string HashPassword(string password)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                StringBuilder sb = new StringBuilder();
-                foreach (byte b in bytes)
-                {
-                    sb.Append(b.ToString("x2"));
-                }
-                return sb.ToString();
-            }
-        }
-        private string GetSHA256Hash(string input)
-        {
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
-                StringBuilder builder = new StringBuilder();
-                foreach (byte b in bytes)
-                {
-                    builder.Append(b.ToString("x2"));
-                }
-                return builder.ToString();
-            }
         }
 
     }

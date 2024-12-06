@@ -301,8 +301,131 @@
     color: orange !important;
 }
 
-.fa-heart:hover {
-    cursor: pointer !important;
-    color: red !important;
+    .fa-heart:hover {
+        cursor: pointer !important;
+        color: red !important;
+    }
+
+.quantity {
+    width: 50px;
+    max-width: 200px;
+}
+/*#endregion*/
+
+/*#region Giỏ hàng page*/
+.line-before::before {
+    content: "|";
+    padding: 0px 20px 10px 20px;
+    font-size: 40px;
+}
+
+.fa-trash:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.fa-question-circle:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.voucher {
+    max-height: 315px;
+    overflow: auto;
+}
+
+    .voucher .voucher-info {
+        font-size: 10px;
+    }
+
+        .voucher .voucher-info img {
+            width: 60px;
+            height: 60px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .voucher .voucher-info .btn-apply {
+            margin-top: auto;
+            margin-left: auto;
+        }
+/*#endregion*/
+
+/*#region Thanh toán page*/
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.address .address-title {
+    color: red;
+    font-size: 18px;
+}
+
+.address .address-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.address .address-info .address-customer-name {
+    font-weight: 500;
+}
+
+.label-default {
+    border: 1px solid orange;
+    text-align: center;
+    padding: 4px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: red;
+}
+/*#endregion*/
+
+/*#region Quản lý đơn hàng page*/
+.m-ml {
+    margin-left: 10px;
+}
+
+.disable-input-outline input:focus {
+    outline:none;
+}
+
+.m-search-bar {
+    background-color: #EAEAEA;
+}
+
+.m-search-input {
+    padding: 3px;
+    background-color: #EAEAEA;
+}
+
+.m-orderitem-status {
+    color: red;
+    text-align: end;
+    padding: 2px 0px;
+    border-bottom: 0.5px solid gray;
+    width: 100%;
+}
+
+.text-red {
+    color: red;
+}
+
+.m-ml-auto {
+    margin-left: auto;
+}
+
+.m-mr-auto {
+    margin-right: auto;
 }
 /*#endregion*/

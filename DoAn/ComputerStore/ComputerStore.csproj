@@ -247,7 +247,10 @@
     <Compile Include="Areas\Admin\Controllers\OrderItemsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductDetailsController.cs" />
     <Compile Include="Areas\User\Controllers\AccountController.cs" />
+    <Compile Include="Areas\User\Controllers\CartItemsController.cs" />
+    <Compile Include="Areas\User\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\User\Controllers\HomeController.cs" />
+    <Compile Include="Areas\User\Controllers\ProductDetailsController.cs" />
     <Compile Include="Areas\User\Controllers\TestProductDetailsController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
@@ -321,6 +324,8 @@
   <ItemGroup>
     <Content Include="assets_admin\js\pages\dashboards-1.init.js" />
     <Content Include="assets_user\css\NHD-css.css" />
+    <Content Include="assets_user\image\NHD-Images\445098-PEZ3SE-119.jpg" />
+    <Content Include="assets_user\image\NHD-Images\logo-gearvn.png" />
     <Content Include="assets_user\image\NHD-Images\pc-2.png" />
     <Content Include="assets_user\NHD-js\quantity-check.js" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\css\style.css" />
@@ -824,6 +829,16 @@
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\vendor\tinymce\package.json" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\vendor\tinymce\README.md" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\forms\contact.php" />
+    <Content Include="Areas\User\Views\TestProductDetails\AccountInfo.cshtml" />
+    <Content Include="Areas\User\Views\TestProductDetails\AddressList.cshtml" />
+    <Content Include="Areas\User\Views\TestProductDetails\GioHang.cshtml" />
+    <Content Include="Areas\User\Views\TestProductDetails\OrderedItems.cshtml" />
+    <Content Include="Areas\User\Views\TestProductDetails\QuanLyDonHang.cshtml" />
+    <Content Include="Areas\User\Views\TestProductDetails\ThanhToan.cshtml" />
+    <Content Include="Areas\User\Views\ProductDetails\Index.cshtml" />
+    <Content Include="Areas\User\Views\CartItems\Index.cshtml" />
+    <Content Include="Areas\User\Views\Categories\Card3060.cshtml" />
+    <Content Include="Areas\User\Views\Categories\ManHinhAsusTuf.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

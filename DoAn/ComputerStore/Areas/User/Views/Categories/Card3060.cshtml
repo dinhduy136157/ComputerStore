@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ComputerStore.Models.ProductDetail>
+
+@{
+    Layout = "~/Areas/User/Views/Shared/_LayoutUser.cshtml";
+}
+<head>
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/assets_user/css/NHD-css.css" />
+
+</head>
+<div class="my-container">
+    <div class="container grid-full-width">
+        <div class="container-content grid">
+            <div class="container-banner row">
+                <a href="" class="container-banner-link col">
+                    <img class="container-banner-img" src="~/assets_user/image/container-banner/xxxbanner1.jpg" alt="">
+                </a>
+                <a href="" class="container-banner-link col">
+                    <img class="container-banner-img" src="~/assets_user/image/container-banner/xxxbanner2.jpg" alt="">
+                </a>
+                <a href="" class="container-banner-link col">
+                    <img class="container-banner-img" src="~/assets_user/image/container-banner/xxxbanner3.jpg" alt="">
+                </a>
+                <a href="" class="container-banner-link col">
+                    <img class="container-banner-img" src="~/assets_user/image/container-banner/xxxbanner4.jpg" alt="">
+                </a>
+            </div>
+            <div class="product-content">
+                <div class="product-header">
+                    <span class="product-header-theme">Top PC Bán Chạy</span>
+                    <a href="" class="product-view-all">
+                        Xem tất cả
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+                <div id="product2" class="product-list">
+                    @foreach (var item in Model)
+                    {
+                        <div class="product-item">
+                            <a href="../ProductDetails/Index/@item.ProductID" class="product-link" id="product-link">
+                                <div class="product-img">
+                                    <img src="~/assets_user/image/data-image/@item.Product.Image1" alt="">
+                                    <div class="add-to-cart">
+                                        <div class="add-content">
+                                            <span class="view-detail">Click để xem chi tiết</span>
+                                            <span class="add-btn">Đặt hàng</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 class="product-name">
+                                    @item.Product.ProductName
+                                </h2>
+                            </a>
+                            <div class="product-about-price">
+                                <div class="product-price">
+                                    <p class="original-price">20,420,000₫</p>
+                                    <p class="new-price">@item.Product.Price</p>
+                                </div>
+                                <div class="product-sale-off">
+                                    -5%
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+            <div class="email-register grid">
+                <div class="intro-text">
+                    Mua hàng online với nhiều ưu đãi hơn tại GEARVN
+                </div>
+                <div class="email-form">
+                    <input type="email" placeholder="Nhập email của bạn" class="email-input">
+                    <p class="email-btn">Đăng ký</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

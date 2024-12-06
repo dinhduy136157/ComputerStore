@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "Quản Lý Đơn Hàng Page";
+    Layout = "~/Areas/User/Views/Shared/_LayoutUser.cshtml";
+}
+
+<head>
+    <!--#region NiceAdmin Template-->
+    <!-- Vendor CSS Files -->
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+
+    <!-- Template Main CSS File -->
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/css/style.css" rel="stylesheet">
+    <!--#endregion-->
+
+    <link rel="stylesheet" href="~/assets_user/css/NHD-css.css" /><!--NgHuuDuy css file modify-->
+
+    <script src="~/Scripts/jquery-3.7.0.min.js"></script>
+</head>
+
+<div class="my-container">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3" id="userMenu">
+                <div class="card">
+                    <div class="card-body pt-3">
+                        <div class="d-flex flex-row gap-3 align-items-center">
+                            <i class="fas fa-user-circle fa-2x"></i>
+                            <div class="h5 pt-2">Nguyễn Hữu Duy</div>
+                        </div>
+                        <hr />
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-2"><i class="fas fa-user"></i></div>
+                                    <div class="col-10"><a href="#" class="link-secondary menu-link" data-url="@Url.Action("AccountInfo", "TestProductDetails")">Thông tin tài khoản</a></div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-2"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="col-10"><a href="#" class="link-secondary menu-link" data-url="@Url.Action("AddressList", "TestProductDetails")">Sổ địa chỉ</a></div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-2"><i class="fas fa-clipboard-list"></i></div>
+                                    <div class="col-10"><a href="#" class="link-secondary menu-link" data-url="@Url.Action("OrderedItems", "TestProductDetails")">Quản lý đơn hàng</a></div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-9" id="userMenuContent">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--#region Script-->
+<!-- Vendor JS Files -->
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+@*<script src="assets/vendor/chart.js/chart.umd.js"></script>*@
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/echarts/echarts.min.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/quill/quill.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/js/main.js"></script>
+<!--#endregion Script-->
+
+<script>
+    $(document).ready(function () {
+        // Bắt sự kiện khi nhấp vào link trong menu
+        $('.menu-link').on('click', function (e) {
+            e.preventDefault();
+
+            // Lấy URL từ data-url
+            var url = $(this).data('url');
+
+            // Gửi yêu cầu Ajax để lấy nội dung
+            $.ajax({
+                url: url,
+                method: 'GET',
+                success: function (data) {
+                    // Chèn nội dung trả về vào div content
+                    $('#userMenuContent').html(data);
+                },
+                error: function () {
+                    alert('Không thể tải nội dung. Vui lòng thử lại!');
+                }
+            });
+        });
+    });
+</script>

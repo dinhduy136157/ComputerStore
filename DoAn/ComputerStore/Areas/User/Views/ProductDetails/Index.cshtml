@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<ComputerStore.Models.ProductDetail>
+
 @{
     ViewBag.Title = "Index Product Details";
     Layout = "~/Areas/User/Views/Shared/_LayoutUser.cshtml";
@@ -44,18 +45,20 @@
 
                         <!-- Slides with controls -->
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="~/assets_user/NiceAdmin/NiceAdmin/assets/img/slides-1.jpg" class="d-block w-100" alt="...">
+                            @if (Model.FirstOrDefault() != null)
+                            {
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/assets_user/image/data-image/@Model.First().Product.Image1" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="~/assets_user/image/data-image/@Model.First().Product.Image1" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="~/assets_user/image/data-image/@Model.First().Product.Image1" class="d-block w-100" alt="...">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="~/assets_user/NiceAdmin/NiceAdmin/assets/img/slides-2.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="~/assets_user/NiceAdmin/NiceAdmin/assets/img/slides-3.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-
+                            }
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
@@ -75,69 +78,73 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="m-product-info">
-                            <div class="m-info-top">
-                                <h5 class="m-product-name">Product Name<i class="far fa-heart fa-pull-right"></i></h5><!--Wishlist Click-->
-                                <div class="m-product-rating">
-                                    <span class="m-rating-star">
-                                        0.0 <i class="fas fa-star"></i>
-                                    </span>
-                                    <span><a href="#">Xem đánh giá</a></span>
-                                </div>
-                            </div>
-                            <div class="m-info-bottom">
-                                <div class="m-product-price">
-                                    <div class="m-origin-price">
-                                        32.990.000₫
-                                    </div>
-                                    <div class="m-discount-price">33.320.000₫</div>
-                                    <div class="m-discount-percent">1%</div>
-                                </div>
-                                <div class="product-gift">
-                                    <div class="box-header text-danger">
-                                        <i class="fas fa-gift"></i>
-                                        <span>Quà tặng khuyến mãi</span>
-                                    </div>
-                                    <div class="gift-info text-danger">
-                                        <ul style="padding-left: 0 !important;">
-                                            <li>
-                                                <span class="rouded-number">1</span>
-                                                <span class="list-gift"><a href="#">Tặng ngay 1 x Tản nhiệt AIO Corsair iCUE LINK TITAN 240 RX RGB WHITE (CW-9061020-WW) trị giá 3.990.000₫</a></span>
-                                            </li>
-                                            <!--Add more gift here-->
-                                        </ul>
+                            @if (Model.FirstOrDefault() != null)
+                            {
+                                <div class="m-info-top">
+                                    <h5 class="m-product-name">@Model.First().Product.ProductName<i class="far fa-heart fa-pull-right"></i></h5><!--Wishlist Click-->
+                                    <div class="m-product-rating">
+                                        <span class="m-rating-star">
+                                            0.0 <i class="fas fa-star"></i>
+                                        </span>
+                                        <span><a href="#">Xem đánh giá</a></span>
                                     </div>
                                 </div>
-                                <div class="m-cart-item" data-product-id="" data-max-quantity="">
-                                    <div class="d-flex flex-row gap-3 m-2 p-2">
-                                        <div>Số lượng</div>
-                                        <div>
-                                            <button class="decrease">-</button>
-                                            <!--Validate product quantity here-->
-                                            <input type="number" class="text-danger text-center pl-1 quantity" size="10" value="0" min="0" />
-                                            <button class="increase">+</button>
+                                <div class="m-info-bottom">
+                                    <div class="m-product-price">
+                                        <div class="m-origin-price">
+                                            @Model.First().Product.Price ₫
                                         </div>
-                                        <div>5 sản phẩm có sẵn</div>
+                                        <div class="m-discount-price">@Model.First().Product.Price</div>
+                                        <div class="m-discount-percent">1%</div>
                                     </div>
-                                    <div class="m-error" style="display:none;">
-                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                            <i class="bi bi-exclamation-triangle me-1"></i>
-                                            Vượt quá số lượng cho phép!
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    <div class="product-gift">
+                                        <div class="box-header text-danger">
+                                            <i class="fas fa-gift"></i>
+                                            <span>Quà tặng khuyến mãi</span>
+                                        </div>
+                                        <div class="gift-info text-danger">
+                                            <ul style="padding-left: 0 !important;">
+                                                <li>
+                                                    <span class="rouded-number">1</span>
+                                                    <span class="list-gift"><a href="#">Tặng ngay 1 x Tản nhiệt AIO Corsair iCUE LINK TITAN 240 RX RGB WHITE (CW-9061020-WW) trị giá 3.990.000₫</a></span>
+                                                </li>
+                                                <!--Add more gift here-->
+                                            </ul>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="m-cart-item" data-product-id="" data-max-quantity="">
+                                        <div class="d-flex flex-row gap-3 m-2 p-2">
+                                            <div>Số lượng</div>
+                                            <div>
+                                                <button class="decrease">-</button>
+                                                <!--Validate product quantity here-->
+                                                <input type="number" id="quantity" class="text-danger text-center pl-1 quantity" size="10" value="1" min="1" />
+                                                <button class="increase">+</button>
+                                            </div>
+                                            <div>@Model.First().Product.Quantity sản phẩm có sẵn</div>
+                                        </div>
+                                        <div class="m-error" style="display:none;">
+                                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                <i class="bi bi-exclamation-triangle me-1"></i>
+                                                Vượt quá số lượng cho phép!
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                <div class="d-flex flex-row gap-3">
-                                    <button type="button" class="btn btn-outline-danger">
-                                        <i class="fas fa-shopping-cart"></i>
-                                        Thêm vào giỏ hàng
-                                    </button>
-                                    <button type="button" class="btn btn-danger btn-buynow">
-                                        <span class="maintext">MUA NGAY</span>
-                                        <span class="subtext">Giao tận nơi hoặc nhận tại cửa hảng</span>
-                                    </button>
+                                    <div class="d-flex flex-row gap-3">
+                                        <button id="addToCartBtn" type="button" class="btn btn-outline-danger">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                        <button id="buyNowBtn" type="button" class="btn btn-danger btn-buynow">
+                                            <span class="maintext">MUA NGAY</span>
+                                            <span class="subtext">Giao tận nơi hoặc nhận tại cửa hảng</span>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
+                            }
+
                         </div>
                     </div>
                 </div><!-- End Default Card -->
@@ -151,43 +158,18 @@
                         <div class="font-weight-bold h4 p-2 pt-3">Thông số kỹ thuật</div>
                         <table class="table">
                             <tbody>
-                                <tr>
-                                    <!--Use foreach to generate table data-->
-                                    <th scope="row">Mainboard</th>
-                                    <td scope="row">GIGABYTE B760M AORUS ELITE AX DDR5</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">CPU</th>
-                                    <td scope="row">Intel Core i5 14600KF / Turbo up to 5.3GHz / 14 Nhân 20 Luồng / 24MB / LGA 1700</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">RAM</th>
-                                    <td scope="row">Corsair Vengeance RGB White 32GB (2x16GB) 5600 DDR5</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">VGA</th>
-                                    <td scope="row">GIGABYTE GeForce RTX 4060 Ti AERO OC 8G (GV-N406TAERO-OC-8GD)</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">HDD</th>
-                                    <td scope="row">Có thể tùy chọn Nâng cấp</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">SSD</th>
-                                    <td scope="row">WD Black SN770 500G M.2 NVMe PCIe Gen4</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">PSU</th>
-                                    <td scope="row">Corsair CX750 - 80 Plus Bronze (750W)</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Case</th>
-                                    <td scope="row">Corsair 3500X TG Mid Tower White (CC-9011277-WW)</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Quạt</th>
-                                    <td scope="row">Bộ 3 quạt Corsair RS120 ARGB WHITE</td>
-                                </tr>
+                                @if (Model != null && Model.Any())
+                                {
+                                    foreach (var specDetail in Model)
+                                    {
+                                        <tr>
+                                            <!--Use foreach to generate table data-->
+                                            <th scope="row">@specDetail.ProductSpecification.SpecificationName</th>
+                                            <td scope="row">@specDetail.SpecificationValue</td>
+                                        </tr>
+
+                                    }
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -482,7 +464,97 @@
 
     </div>
 </div>
+<script>
+    //Xử lý Event thêm giỏ hàng và mua
+        document.getElementById('addToCartBtn').addEventListener('click', function () {
+        var productId = @Model.First().ProductID;
+        var quantity = document.getElementById('quantity').value;
 
+            fetch('/CartItems/AddToCart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ productId: productId, quantity: quantity })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    });
+
+    document.getElementById('buyNowBtn').addEventListener('click', function () {
+        var productId = @Model.First().ProductID;
+        var quantity = document.getElementById('quantity').value;
+
+        fetch('/CartItems/BuyNow', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ productId: productId, quantity: quantity })
+        })
+            .then(() => {
+                window.location.href = '../../CartItems/Index';
+            })
+            .catch(error => console.error('Error:', error));
+    });
+
+    // Lấy giá trị max quantity từ Razor
+    const maxQuantity = @Model.First().Product.Quantity;
+
+    const cartItems = document.querySelectorAll(".m-cart-item");
+
+    cartItems.forEach((item) => {
+        const quantityInput = item.querySelector(".quantity");
+        const increaseBtn = item.querySelector(".increase");
+        const decreaseBtn = item.querySelector(".decrease");
+        const errorMsg = item.querySelector(".m-error");
+
+        function validateQuantity() {
+            quantityInput.value = quantityInput.value.replace(/\D/g, "");
+            let currentValue = parseInt(quantityInput.value);
+
+            if (isNaN(currentValue) || currentValue < 1) {
+                quantityInput.value = 1;
+                errorMsg.style.display = "none";
+            } else if (currentValue > maxQuantity) {
+                quantityInput.value = maxQuantity;
+                errorMsg.style.display = "block";
+            } else {
+                errorMsg.style.display = "none";
+            }
+        }
+
+        increaseBtn.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value) || 1;
+
+            if (currentValue < maxQuantity) {
+                quantityInput.value = currentValue + 1;
+            }
+
+            validateQuantity();
+        });
+
+        decreaseBtn.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value) || 1;
+
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+
+            validateQuantity();
+        });
+
+        quantityInput.addEventListener("input", validateQuantity);
+        quantityInput.addEventListener("blur", validateQuantity);
+    });
+</script>
 <!--#region Script-->
 <!-- Vendor JS Files -->
 <script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
@@ -498,4 +570,3 @@
 <script src="~/assets_user/NiceAdmin/NiceAdmin/assets/js/main.js"></script>
 <!--#endregion Script-->
 <!--Quantity check-->
-<script src="~/assets_user/NHD-js/quantity-check.js"></script>

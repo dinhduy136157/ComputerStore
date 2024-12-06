@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\admin\\source\\repos\\computerstore\\doan\\computerstore\\areas\\user\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\admin\\source\\repos\\computerstore\\doan\\computerstore\\areas\\user\\views\\cartitems\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\views\\cartitems\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\admin\\source\\repos\\computerstore\\doan\\computerstore\\areas\\user\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\admin\\source\\repos\\computerstore\\doan\\computerstore\\areas\\user\\controllers\\cartitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\controllers\\cartitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\computerstore\\areas\\user\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\admin\\source\\repos\\computerstore\\doan\\computerstore\\areas\\user\\views\\shared\\_layoutuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\views\\shared\\_layoutuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\computerstore\\areas\\user\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\user\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\computerstore\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|c:\\users\\admin\\source\\repos\\computerstore\\doan\\computerstore\\areas\\admin\\views\\productdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DACCC767-905A-4442-A787-DCE519176AFC}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\areas\\admin\\views\\productdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,72 +34,58 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T08:23:26.414Z",
-              "EditorCaption": ""
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\User\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "ComputerStore\\Areas\\User\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAkwGcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T03:26:53.539Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T03:26:46.775Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\ProductDetails\\Index.cshtml",
+              "RelativeDocumentMoniker": "ComputerStore\\Areas\\Admin\\Views\\ProductDetails\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\Admin\\Views\\ProductDetails\\Index.cshtml",
+              "RelativeToolTip": "ComputerStore\\Areas\\Admin\\Views\\ProductDetails\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T17:16:15.269Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\User\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "ComputerStore\\Areas\\User\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA6wEgAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T16:14:02.526Z"
+              "Title": "_LayoutUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\Shared\\_LayoutUser.cshtml",
+              "RelativeDocumentMoniker": "ComputerStore\\Areas\\User\\Views\\Shared\\_LayoutUser.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\Shared\\_LayoutUser.cshtml",
+              "RelativeToolTip": "ComputerStore\\Areas\\User\\Views\\Shared\\_LayoutUser.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T17:07:48.682Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "ComputerStore\\Areas\\User\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "ComputerStore\\Areas\\User\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACgAAAA+AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\CartItems\\Index.cshtml",
+              "RelativeDocumentMoniker": "ComputerStore\\Areas\\User\\Views\\CartItems\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Views\\CartItems\\Index.cshtml",
+              "RelativeToolTip": "ComputerStore\\Areas\\User\\Views\\CartItems\\Index.cshtml",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T15:20:10.074Z",
+              "WhenOpened": "2024-12-05T16:46:30.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Controllers\\CartItemsController.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\Areas\\User\\Controllers\\CartItemsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\ComputerStore\\DoAn\\ComputerStore\\Areas\\User\\Controllers\\CartItemsController.cs",
+              "RelativeToolTip": "ComputerStore\\Areas\\User\\Controllers\\CartItemsController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB0AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T15:35:42.165Z",
               "EditorCaption": ""
             }
           ]

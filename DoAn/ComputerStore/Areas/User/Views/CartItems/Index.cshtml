@@ -1,0 +1,242 @@
+﻿@model IEnumerable<ComputerStore.Models.CartItem>
+
+@{
+    ViewBag.Title = "Giỏ Hàng Page";
+    Layout = "~/Areas/User/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+<head>
+    <!--#region NiceAdmin Template-->
+    <!-- Vendor CSS Files -->
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+
+    <!-- Template Main CSS File -->
+    <link href="~/assets_user/NiceAdmin/NiceAdmin/assets/css/style.css" rel="stylesheet">
+    <!--#endregion-->
+
+    <link rel="stylesheet" href="~/assets_user/css/NHD-css.css" /><!--NgHuuDuy css file modify-->
+
+</head>
+
+
+<div class="my-container">
+    <div class="page-title mb-3">
+        <nav class=" d-flex flex-row gap-2 align-items-center">
+            <a href="@Url.Action("Index", "Home")">
+                <img src="~/assets_user/image/NHD-Images/logo-gearvn.png" width="60" />
+            </a>
+            <h3 class="line-before">Giỏ Hàng</h3>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="card pt-4">
+                <div class="card-body row">
+                    <div class="col-6">
+                        <h6>Sản phẩm</h6>
+                    </div>
+                    <div class="col-6">
+                        <div class="row text-center text-secondary">
+                            <div class="col-4"><h6>Đơn giá</h6></div>
+                            <div class="col-3"><h6>Số lượng</h6></div>
+                            <div class="col-3"><h6>Số tiền</h6></div>
+                            <div class="col-2"><h6>Thao tác</h6></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Use for loop here to generate div for every product-->
+        @foreach (var item in Model.GroupBy(p => p.CartItemID).Select(g => g.First()))
+        {
+            <div class="row m-cart-item" data-product-id="" data-max-quantity="">
+                <div class="card pt-4">
+                    <div class="card-body row align-items-center">
+                        <div class="col-6">
+                            <div class="d-flex flex-row align-items-center gap-3">
+                                <img class="" width="60" src="~/assets_user/image/data-image/@item.Product.Image1" alt="Product Image" />
+                                <h6>
+                                    PC GVN x Corsair iCUE (Intel i5-14600KF/ VGA RTX 4060 Ti)
+                                    PC GVN x Corsair iCUE (Intel i5-14600KF/ VGA RTX 4060 Ti)
+                                    PC GVN x Corsair iCUE (Intel i5-14600KF/ VGA RTX 4060 Ti)
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row text-center text-secondary align-items-center">
+                                <div class="col-4 related-product">
+                                    <div class="m-discount-price">33.320.000₫</div>
+                                    <div class="m-product-price justify-content-center">
+                                        <div class="m-origin-price">
+                                            @item.Product.Price
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div>
+                                        <button class="decrease">-</button>
+                                        <!--Validate product quantity here-->
+                                        <input style="width: 50%" type="number" class="text-danger text-center pl-1 quantity" size="10" value="1" min="1" />
+                                        <button class="increase">+</button>
+                                    </div>
+                                </div>
+                                <div class="col-3 related-product">
+                                    <div class="m-product-price justify-content-center">
+                                        <div class="m-origin-price text-secondary">
+                                            32.990.000₫
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!--End for loop-->
+        <div class="row">
+            <div class="card flex-row justify-content-end p-4">
+                <div class="d-flex flex-column w-100">
+                    <div class="summary-item gap-4">
+                        <h6 class="mt-2">GearVN Voucher</h6>
+                        <!-- Basic Modal -->
+                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#basicModal">
+                            Chọn hoặc nhập mã
+                        </button>
+                        <div class="modal fade" id="basicModal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header d-flex flex-row">
+                                        <div>
+                                            <h6 class="modal-title">Chọn GearVN Voucher</h6>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center" style="margin-left: auto;">
+                                            <a class="link-danger" href="#">Hỗ Trợ</a>
+                                            <i class="far fa-question-circle fa-1x fa-pull-right"></i>
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="card">
+                                            <div class="card-body pt-3">
+                                                <div class="d-flex flex-row align-items-center gap-3">
+                                                    <div>
+                                                        <h6 class="mt-2">Mã Voucher</h6>
+                                                    </div>
+                                                    <div>
+                                                        <input class="form-control" type="text" placeholder="Mã GearVN Voucher" />
+                                                    </div>
+                                                    <div>
+                                                        <button class="btn btn-outline-secondary" type="button">ÁP DỤNG</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body pt-3">
+                                                <div class="list-group voucher">
+                                                    <div class="list-group-item d-flex flex-row gap-2 voucher-info">
+                                                        <img style="height: 200px" src="~/assets_user/image/NHD-Images/445098-PEZ3SE-119.jpg" alt="Voucher Image" />
+                                                        <div class="d-flex flex-column gap-2">
+                                                            <div>
+                                                                <h6 class="m-font-size-12">Giảm 30.000₫</h6>
+                                                                Đơn hàng từ 0K
+                                                            </div>
+                                                            <div>
+                                                                Mã: <b>FREESHIP30K</b><br />
+                                                                HSD: Thứ 3, 23:59 31 12, 2024
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-apply">
+                                                            <button type="button" class="btn btn-outline-primary m-font-size-12">Áp dụng</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-group-item d-flex flex-row gap-2 voucher-info">
+                                                        <img style="height: 200px" src="~/assets_user/image/NHD-Images/445098-PEZ3SE-119.jpg" alt="Voucher Image" />
+                                                        <div class="d-flex flex-column gap-2">
+                                                            <div>
+                                                                <h6 class="m-font-size-12">Giảm 100.000₫</h6>
+                                                                Đơn hàng từ 3000K
+                                                            </div>
+                                                            <div>
+                                                                Mã: <b>DAILY100</b><br />
+                                                                HSD: Thứ 3, 23:59 31 12, 2024
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-apply">
+                                                            <button type="button" class="btn btn-outline-primary m-font-size-12">Áp dụng</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-group-item d-flex flex-row gap-2 voucher-info">
+                                                        <img style="height: 200px" src="~/assets_user/image/NHD-Images/445098-PEZ3SE-119.jpg" alt="Voucher Image" />
+                                                        <div class="d-flex flex-column gap-2">
+                                                            <div>
+                                                                <h6 class="m-font-size-12">Giảm 100.000₫</h6>
+                                                                Đơn hàng từ 3000K
+                                                            </div>
+                                                            <div>
+                                                                Mã: <b>DAILY100</b><br />
+                                                                HSD: Thứ 3, 23:59 31 12, 2024
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-apply">
+                                                            <button type="button" class="btn btn-outline-primary m-font-size-12">Áp dụng</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">TRỞ LẠI</button>
+                                        <button type="button" class="btn btn-primary">OK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Basic Modal-->
+
+                    </div>
+                    <hr />
+                    <div class="summary-item gap-3">
+                        <h6>Tổng thanh toán (2 sản phẩm): </h6>
+                        <h4 class="text-danger"><sup>₫</sup>2.500.000</h4>
+                    </div>
+                    <hr />
+                    <div class="summary-item">
+                        <button class="btn btn-danger text-bg-danger btn-lg" type="button">Thanh toán</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--#region Script-->
+<!-- Vendor JS Files -->
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+@*<script src="assets/vendor/chart.js/chart.umd.js"></script>*@
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/echarts/echarts.min.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/quill/quill.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="~/assets_user/NiceAdmin/NiceAdmin/assets/js/main.js"></script>
+<!--#endregion Script-->
+<!--Quantity check, may be we need to change function because there are many products in this page-->
+<!--Script doesn't work because of duplicated id'-->
+<!--Fixed-->
+<script src="~/assets_user/NHD-js/quantity-check.js"></script>

@@ -69,7 +69,7 @@
                                         PC theo cấu hình VGA
                                         <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA 1650</a>
                                         <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA 3050</a>
-                                        <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA 3060</a>
+                                        <a class="product-of-catalog-content-items" href="../Categories/Card3060">PC sử dụng VGA 3060</a>
                                         <a class="product-of-catalog-content-items" href="https:youtube.com">PC sử dụng VGA RX 6600</a>
                                         <a class="product-of-catalog-content-items text-bold" href="https:youtube.com">Xem tất cả PC GVN</a>
                                     </span>
@@ -111,8 +111,8 @@
                                 <div class="product-of-catalog-content">
                                     <span class="product-of-catalog-content-name">
                                         Hãng sản xuất
-                                        <a class="product-of-catalog-content-items" href="https:youtube.com">LG</a>
-                                        <a class="product-of-catalog-content-items" href="https:youtube.com">Asus</a>
+                                        <a class="product-of-catalog-content-items" href="../Categories/ManHinhAsusTuf">Asus Tuf</a>
+                                        <a class="product-of-catalog-content-items" href="../Categories/ManHinhAsusTuf">Asus</a>
                                         <a class="product-of-catalog-content-items" href="https:youtube.com">ViewSonic</a>
                                         <a class="product-of-catalog-content-items" href="https:youtube.com">Gigabyte</a>
                                         <a class="product-of-catalog-content-items" href="https:youtube.com">AOC</a>
@@ -485,7 +485,7 @@
                     @foreach (var item in Model.PcDetailsList.GroupBy(p => p.P.ProductID).Select(g => g.First()))
                     {
                         <div class="product-item">
-                            <a href="" class="product-link" id="product-link">
+                            <a href="~/User/ProductDetails/Index/@item.P.ProductID" class="product-link" id="product-link">
                                 <div class="product-img">
                                     <img src="~/assets_user/image/data-image/@item.P.Image1" alt="">
                                     <div class="add-to-cart">
@@ -502,7 +502,7 @@
                             <div class="product-about-price">
                                 <div class="product-price">
                                     <p class="original-price">20,420,000₫</p>
-                                    <p class="new-price">19,490,000₫</p>
+                                    <p class="new-price">@item.P.Price ₫</p>
                                 </div>
                                 <div class="product-sale-off">
                                     -5%
@@ -525,7 +525,7 @@
                     @foreach (var item in Model.PhoneDetailsList.GroupBy(p => p.P.ProductID).Select(g => g.First()))
                     {
                         <div class="product-item">
-                            <a href="" class="product-link" id="product-link">
+                            <a href="~/User/ProductDetails/Index/@item.P.ProductID" class="product-link" id="product-link">
                                 <div class="product-img">
                                     <img src="~/assets_user/image/data-image/@item.P.Image1" alt="">
                                     <div class="add-to-cart">
@@ -542,7 +542,7 @@
                             <div class="product-about-price">
                                 <div class="product-price">
                                     <p class="original-price">20,420,000₫</p>
-                                    <p class="new-price">19,490,000₫</p>
+                                    <p class="new-price">@item.P.Price ₫</p>
                                 </div>
                                 <div class="product-sale-off">
                                     -5%
@@ -564,7 +564,7 @@
                     @foreach (var item in Model.ScreenDetailsList.GroupBy(p => p.P.ProductID).Select(g => g.First()))
                     {
                         <div class="product-item">
-                            <a href="" class="product-link" id="product-link">
+                            <a href="~/User/ProductDetails/Index/@item.P.ProductID" class="product-link" id="product-link">
                                 <div class="product-img">
                                     <img src="~/assets_user/image/data-image/@item.P.Image1" alt="">
                                     <div class="add-to-cart">
@@ -581,7 +581,7 @@
                             <div class="product-about-price">
                                 <div class="product-price">
                                     <p class="original-price">20,420,000₫</p>
-                                    <p class="new-price">19,490,000₫</p>
+                                    <p class="new-price">@item.P.Price ₫</p>
                                 </div>
                                 <div class="product-sale-off">
                                     -5%
