@@ -15,23 +15,40 @@ namespace ComputerStore.Areas.User.Controllers
         private ComputerStoreEntities db = new ComputerStoreEntities();
 
         // GET: User/CartItems
+        public class CartItemViewModel
+        {
+            public CartItem CartItem { get; set; } 
+            public Cart Cart { get; set; }        
+            public Product Product { get; set; }  
+            public List<ProductDetail> ProductDetails { get; set; } 
+        }
+
         public ActionResult Index()
         {
             if (Session["UserID"] == null)
             {
-                return RedirectToAction("Login", "Account"); // Chuyển hướng đến trang Login
+                return RedirectToAction("Login", "Account"); 
             }
+
             var userId = (int)Session["UserID"];
+
             var cartItems = (from ci in db.CartItems
                              join c in db.Carts on ci.CartID equals c.CartID
                              join p in db.Products on ci.ProductID equals p.ProductID
-                             join pd in db.ProductDetails on p.ProductID equals pd.ProductID
-                             where c.UserID == 1
-                             select ci).ToList();  // Chỉ chọn CartItem
+                             where c.UserID == userId
+                             select new CartItemViewModel
+                             {
+                                 CartItem = ci,
+                                 Cart = c,
+                                 Product = p,
+                                 ProductDetails = db.ProductDetails
+                                                   .Where(pd => pd.ProductID == p.ProductID)
+                                                   .ToList() // Lấy danh sách ProductDetails cho từng sản phẩm
+                             }).ToList();
 
-
-            return View(cartItems.ToList());
+            return View(cartItems); 
         }
+
         [HttpPost]
         public ActionResult AddToCart(int productId, int quantity)
         {

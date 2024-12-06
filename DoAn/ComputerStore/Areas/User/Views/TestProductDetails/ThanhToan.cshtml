@@ -45,10 +45,19 @@
                         </div>
                         <div class="address-info">
                             <div class="address-customer-name">
-                                Nguyễn Hữu Duy (+84) 963424338
+                                <span id="currentUserFullName">Nguyễn Hữu Duy</span>
+                                <span>(+84) </span>
+                                <span id="currentUserPhone">963424338</span>
                             </div>
                             <div class="address-customer-location">
-                                Thôn đồi 3, Xã Đông Phương Yên, Huyện Chương Mỹ, Hà Nội <span class="label-default">Mặc Định</span>
+                                <span id="currentUserSpecificAddress">Thôn đồi 3</span>
+                                <span>, </span>
+                                <span id="currentUserCommune">Xã Đông Phương Yên</span>
+                                <span>, </span>
+                                <span id="currentUserDistrict">Huyện Chương Mỹ</span>
+                                <span>, </span>
+                                <span id="currentUserCity">Hà Nội</span>
+                                <span class="label-default" id="isAddressDefault">Mặc Định</span>
                             </div>
                             <!-- Basic Modal -->
                             <button type="button" class="btn text-primary m-font-size-12 ml-2" data-bs-toggle="modal" data-bs-target="#addressModal">
@@ -67,47 +76,47 @@
                                                     <form class="d-flex flex-column gap-2">
                                                         <div class="d-flex flex-row gap-3 justify-content-around">
                                                             <div class="form-floating mb-3 w-50">
-                                                                <input type="text" class="form-control" id="floatingInput" placeholder="Họ và tên">
-                                                                <label for="floatingInput">Họ và tên</label>
+                                                                <input type="text" class="form-control" id="txtUserFullName" placeholder="Họ và tên">
+                                                                <label for="txtUserFullName">Họ và tên</label>
                                                             </div>
                                                             <div class="form-floating mb-3 w-50">
-                                                                <input type="tel" class="form-control" id="floatingInput" placeholder="Số điện thoại">
-                                                                <label for="floatingInput">Số điện thoại</label>
+                                                                <input type="tel" class="form-control" id="txtUserPhone" placeholder="Số điện thoại">
+                                                                <label for="txtUserPhone">Số điện thoại</label>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex flex-row gap-3 justify-content-around">
                                                             <div class="form-floating mb-3 w-50">
                                                                 <select class="form-select" id="cbbCity" aria-label="Floating label select example">
                                                                     <!--Call API-->
-                                                                    <option value="1">Hà Nội</option>
-                                                                    <option value="2">Thành phố Hồ Chí Minh</option>
-                                                                    <option value="3">Đà Nẵng</option>
+                                                                    <option value="Hà Nội">Hà Nội</option>
+                                                                    <option value="Thành phố Hồ Chí Minh">Thành phố Hồ Chí Minh</option>
+                                                                    <option value="Đà Nẵng">Đà Nẵng</option>
                                                                 </select>
                                                                 <label for="cbbCity">Tỉnh/Thành phố</label>
                                                             </div>
                                                             <div class="form-floating mb-3 w-50">
-                                                                <select class="form-select" id="cbbProvince" aria-label="Floating label select example">
+                                                                <select class="form-select" id="cbbDistrict" aria-label="Floating label select example">
                                                                     <!--Call API-->
-                                                                    <option value="1">Thanh Xuân</option>
-                                                                    <option value="2">Đống Đa</option>
-                                                                    <option value="3">Nam Từ Liêm</option>
+                                                                    <option value="Thanh Xuân">Thanh Xuân</option>
+                                                                    <option value="Đống Đa">Đống Đa</option>
+                                                                    <option value="Nam Từ Liêm">Nam Từ Liêm</option>
                                                                 </select>
-                                                                <label for="cbbProvince">Quận/Huyện</label>
+                                                                <label for="cbbDistrict">Quận/Huyện</label>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex flex-row gap-3 justify-content-around">
                                                             <div class="form-floating mb-3 w-50">
                                                                 <select class="form-select" id="cbbCommune" aria-label="Floating label select example">
                                                                     <!--Call API-->
-                                                                    <option value="1">Đông Phương Yên</option>
-                                                                    <option value="2">Trường Yên</option>
-                                                                    <option value="3">Đông Sơn</option>
+                                                                    <option value="Đông Phương Yên">Đông Phương Yên</option>
+                                                                    <option value="Trường Yên">Trường Yên</option>
+                                                                    <option value="Đông Sơn">Đông Sơn</option>
                                                                 </select>
                                                                 <label for="cbbCommune">Xã/Phường/Thị trấn</label>
                                                             </div>
                                                             <div class="form-floating mb-3 w-50">
-                                                                <input type="text" class="form-control" id="floatingInput" placeholder="Số nhà, tên đường, thôn, ...">
-                                                                <label for="floatingInput">Địa chỉ cụ thể</label>
+                                                                <input type="text" class="form-control" id="txtUserSpecificAddress" placeholder="Số nhà, tên đường, thôn, ...">
+                                                                <label for="txtUserSpecificAddress">Địa chỉ cụ thể</label>
                                                             </div>
                                                         </div>
                                                     </form>
@@ -116,7 +125,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                                            <button type="button" class="btn btn-primary">Xác nhận</button>
+                                            <button type="button" class="btn btn-primary" id="saveAddressBtn">Xác nhận</button>
                                         </div>
                                     </div>
                                 </div>
@@ -449,3 +458,5 @@
 <!-- Template Main JS File -->
 <script src="~/assets_user/NiceAdmin/NiceAdmin/assets/js/main.js"></script>
 <!--#endregion Script-->
+
+<script src="~/assets_user/NHD-js/shipping-info.js"></script>

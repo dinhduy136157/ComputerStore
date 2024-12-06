@@ -39,6 +39,8 @@ namespace ComputerStore.Areas.User.Controllers
                 {
                     Session["UserID"] = user.UserID;
                     Session["UserName"] = user.UserName;
+                    Session["Address"] = string.IsNullOrEmpty(user.Address) ? "Địa chỉ chưa có" : user.Address;
+                    Session["Phone"] = string.IsNullOrEmpty(user.Phone) ? "Số điện thoại chưa có" : user.Phone;
                     return RedirectToAction("Index", "Home");
                 }
                 else

@@ -250,6 +250,7 @@
     <Compile Include="Areas\User\Controllers\CartItemsController.cs" />
     <Compile Include="Areas\User\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\User\Controllers\HomeController.cs" />
+    <Compile Include="Areas\User\Controllers\OrderItemsController.cs" />
     <Compile Include="Areas\User\Controllers\ProductDetailsController.cs" />
     <Compile Include="Areas\User\Controllers\TestProductDetailsController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
@@ -328,6 +329,7 @@
     <Content Include="assets_user\image\NHD-Images\logo-gearvn.png" />
     <Content Include="assets_user\image\NHD-Images\pc-2.png" />
     <Content Include="assets_user\NHD-js\quantity-check.js" />
+    <Content Include="assets_user\NHD-js\shipping-info.js" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\css\style.css" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\img\apple-touch-icon.png" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\img\card.jpg" />
@@ -2694,6 +2696,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\User\Views\OrderItems\" />
     <Folder Include="assets_user\image\Headphone\" />
     <Folder Include="assets_user\image\Mouse\" />
     <Folder Include="assets_user\image\PC\" />
