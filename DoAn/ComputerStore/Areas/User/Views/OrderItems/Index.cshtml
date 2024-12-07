@@ -34,29 +34,30 @@
                     <div class="card-body pt-3">
                         <div class="d-flex flex-row gap-3 align-items-center">
                             <i class="fas fa-user-circle fa-2x"></i>
-                            <div class="h5 pt-2">Nguyễn Hữu Duy</div>
+                            <div class="h5 pt-2">Đinh Văn Duy</div>
                         </div>
                         <hr />
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <div class="row">
+                                    <div class="col-2"><i class="fas fa-clipboard-list"></i></div>
+                                    <div class="col-10"><a href="#" class="link-secondary menu-link" data-url="@Url.Action("OrderedItems", "OrderItems")">Quản lý đơn hàng</a></div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
                                     <div class="col-2"><i class="fas fa-user"></i></div>
-                                    <div class="col-10"><a href="#" class="link-secondary menu-link" data-url="@Url.Action("AccountInfo", "TestProductDetails")">Thông tin tài khoản</a></div>
+                                    <div class="col-10"><a href="#" class="link-secondary menu-link" data-url="@Url.Action("AccountInfo", "OrderItems")">Thông tin tài khoản</a></div>
                                 </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col-2"><i class="fas fa-map-marker-alt"></i></div>
-                                    <div class="col-10"><a href="#" class="link-secondary menu-link" data-url="@Url.Action("AddressList", "TestProductDetails")">Sổ địa chỉ</a></div>
+                                    <div class="col-10"><a href="#" class="link-secondary menu-link" data-url="@Url.Action("AddressList", "OrderItems")">Sổ địa chỉ</a></div>
                                 </div>
                             </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="col-2"><i class="fas fa-clipboard-list"></i></div>
-                                    <div class="col-10"><a href="#" class="link-secondary menu-link" data-url="@Url.Action("OrderedItems", "TestProductDetails")">Quản lý đơn hàng</a></div>
-                                </div>
-                            </li>
-                            
+
+
                         </ul>
                     </div>
                 </div>
@@ -86,26 +87,30 @@
 <!--#endregion Script-->
 
 <script>
-    $(document).ready(function () {
-        // Bắt sự kiện khi nhấp vào link trong menu
-        $('.menu-link').on('click', function (e) {
-            e.preventDefault();
+  $(document).ready(function () {
+    // Bắt sự kiện khi nhấp vào link trong menu
+    $('.menu-link').on('click', function (e) {
+        e.preventDefault();
 
-            // Lấy URL từ data-url
-            var url = $(this).data('url');
+        // Lấy URL từ data-url
+        var url = $(this).data('url');
 
-            // Gửi yêu cầu Ajax để lấy nội dung
-            $.ajax({
-                url: url,
-                method: 'GET',
-                success: function (data) {
-                    // Chèn nội dung trả về vào div content
-                    $('#userMenuContent').html(data);
-                },
-                error: function () {
-                    alert('Không thể tải nội dung. Vui lòng thử lại!');
-                }
-            });
+        // Gửi yêu cầu Ajax để lấy nội dung
+        $.ajax({
+            url: url,
+            method: 'GET',
+            success: function (data) {
+                // Chèn nội dung trả về vào div content
+                $('#userMenuContent').html(data);
+            },
+            error: function () {
+                alert('Không thể tải nội dung. Vui lòng thử lại!');
+            }
         });
     });
+
+    // Tự động mở "Quản lý đơn hàng" khi trang được tải
+    $('.menu-link[data-url="@Url.Action("OrderedItems", "OrderItems")"]').click();
+});
+
 </script>

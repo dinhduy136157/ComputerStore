@@ -722,7 +722,6 @@
     <Content Include="Areas\User\Views\Home\Index.cshtml" />
     <Content Include="Areas\User\Views\Account\Login.cshtml" />
     <Content Include="Areas\User\Views\Account\Register.cshtml" />
-    <Content Include="Areas\User\Views\TestProductDetails\Index.cshtml" />
     <Content Include="assets_user\NiceAdmin\.vscode\settings.json" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\vendor\apexcharts\locales\ar.json" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\vendor\apexcharts\locales\be-cyrl.json" />
@@ -831,16 +830,14 @@
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\vendor\tinymce\package.json" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\vendor\tinymce\README.md" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\forms\contact.php" />
-    <Content Include="Areas\User\Views\TestProductDetails\AccountInfo.cshtml" />
-    <Content Include="Areas\User\Views\TestProductDetails\AddressList.cshtml" />
-    <Content Include="Areas\User\Views\TestProductDetails\GioHang.cshtml" />
-    <Content Include="Areas\User\Views\TestProductDetails\OrderedItems.cshtml" />
-    <Content Include="Areas\User\Views\TestProductDetails\QuanLyDonHang.cshtml" />
-    <Content Include="Areas\User\Views\TestProductDetails\ThanhToan.cshtml" />
     <Content Include="Areas\User\Views\ProductDetails\Index.cshtml" />
     <Content Include="Areas\User\Views\CartItems\Index.cshtml" />
     <Content Include="Areas\User\Views\Categories\Card3060.cshtml" />
     <Content Include="Areas\User\Views\Categories\ManHinhAsusTuf.cshtml" />
+    <Content Include="Areas\User\Views\OrderItems\Index.cshtml" />
+    <Content Include="Areas\User\Views\OrderItems\AccountInfo.cshtml" />
+    <Content Include="Areas\User\Views\OrderItems\AddressList.cshtml" />
+    <Content Include="Areas\User\Views\OrderItems\OrderedItems.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -2696,7 +2693,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\User\Views\OrderItems\" />
     <Folder Include="assets_user\image\Headphone\" />
     <Folder Include="assets_user\image\Mouse\" />
     <Folder Include="assets_user\image\PC\" />

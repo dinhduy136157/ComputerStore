@@ -194,7 +194,7 @@
                                         <div class="m-discount-price">33.320.000₫</div>
                                         <div class="m-product-price justify-content-center">
                                             <div class="m-origin-price">
-                                                @item.Product.Price
+                                                @item.Product.Price.ToString("N0")₫
                                             </div>
                                         </div>
                                     </div>
@@ -206,7 +206,7 @@
                                     <div class="col-3 related-product">
                                         <div class="m-product-price justify-content-center">
                                             <div class="m-origin-price text-secondary total-price">
-                                                @((@item.Product.Price) * @item.CartItem.Quantity)₫
+                                                @((@item.Product.Price * @item.CartItem.Quantity).ToString("N0"))₫
 
                                             </div>
                                         </div>
@@ -327,18 +327,50 @@
                         <hr />
                         <div class="summary-item gap-3">
                             <h6>Tổng thanh toán (@totalProducts sản phẩm): </h6>
-                            <h4 class="text-danger"><sup>₫</sup>@totalPrice</h4>
+                            <h4 class="text-danger"><sup>₫</sup>@totalPrice.ToString("N0")</h4>
                         </div>
                         <hr />
                         <div class="summary-item">
-                            <button class="btn btn-danger text-bg-danger btn-lg" type="button">Thanh toán</button>
+                            <button class="btn btn-danger text-bg-danger btn-lg" id="placeOrderBtn">Thanh toán</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
+<script>
+    document.getElementById("placeOrderBtn").addEventListener("click", async function () {
+        try {
+            console.log("Gửi yêu cầu đến server...");
 
+            const response = await fetch('/User/OrderItems/CreateOrderWithItems', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+
+            console.log("Đã nhận phản hồi từ server...");
+
+            const result = await response.json();
+
+            if (result.success) {
+                alert(result.message);
+                console.log("Phản hồi thành công:", result);
+                // Redirect hoặc reload
+                location.href = "/Order/Success";
+            } else {
+                alert(result.message);
+                console.log("Phản hồi lỗi từ server:", result);
+            }
+        } catch (error) {
+            console.error("Lỗi bắt được:", error);
+            alert("Có lỗi xảy ra khi xử lý đặt hàng. Vui lòng thử lại.");
+        }
+    });
+
+</script>
     <!--#region Script-->
     <!-- Vendor JS Files -->
     <script src="~/assets_user/NiceAdmin/NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>

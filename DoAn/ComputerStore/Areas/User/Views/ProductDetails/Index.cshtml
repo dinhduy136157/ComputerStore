@@ -92,7 +92,7 @@
                                 <div class="m-info-bottom">
                                     <div class="m-product-price">
                                         <div class="m-origin-price">
-                                            @Model.First().Product.Price ₫
+                                            @Model.First().Product.Price.ToString("N0")₫
                                         </div>
                                         <div class="m-discount-price">@Model.First().Product.Price</div>
                                         <div class="m-discount-percent">1%</div>
