@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using ComputerStore.Models;
 using System.Data.Entity;
+using System.Data.Entity.SqlServer;
 
 
 namespace ComputerStore.Areas.User.Controllers
@@ -98,6 +99,30 @@ namespace ComputerStore.Areas.User.Controllers
             // Trả về View với ViewModel
             return View(viewModel);
         }
+        public ActionResult Search(string searchTerm)
+        {
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                // Trả về tất cả sản phẩm nếu không có từ khóa tìm kiếm
+                var productss = db.Products.ToList();
+                return View(productss);
+            }
+
+            // Tìm kiếm theo SpecificationValue và ProductName
+            var products = (from pd in db.ProductDetails
+                            join p in db.Products on pd.ProductID equals p.ProductID
+                            where (SqlFunctions.PatIndex("%" + searchTerm + "%", pd.SpecificationValue) > 0 || p.ProductName.Contains(searchTerm))
+                            select new
+                            {
+                                p.ProductID,
+                                p.ProductName,
+                                SpecificationValue = pd.SpecificationValue
+                            }).Distinct().ToList();
+
+            return View(products);
+        }
+
+
 
     }
 }
