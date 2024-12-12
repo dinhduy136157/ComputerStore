@@ -29,52 +29,57 @@
                             <img class="logo-img my-logo-img" src="~/assets_user/image/logo/logo_header.svg" alt="Ảnh Logo">
                         </a>
                     </div>
+
                     <div class="right-header">
-                        <div class="top-header">
-                            <div class="search">
-                                <input class="search-area" placeholder="Nhập mã hoặc tên sản phẩm..." type="text">
-                                <div class="search-icon">
-                                    <i class="fas fa-search"></i>
+                        <form action="@Url.Action("Search", "Home")" method="get" id="searchForm">
+                            <div class="top-header">
+
+                                <div class="search">
+                                    <input class="search-area" placeholder="Nhập mã hoặc tên sản phẩm..." type="text" name="searchTerm" />
+                                    <div class="search-icon" onclick="document.getElementById('searchForm').submit();">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+
+                                <div class="account">
+                                    @if (Session["UserID"] != null)
+                                    {
+                                        <a class="header-top-right" href="~/User/OrderItems/Index">
+                                            <i class="fas fa-user-circle"></i>
+                                            <div class="header-right-text">Chào, @Session["UserName"]</div>
+                                        </a>
+                                        <a class="header-top-right" href="@Url.Action("Logout","Account")">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                            <div class="header-right-text">Đăng xuất</div>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a class="header-top-right" href="@Url.Action("Register","Account")">
+                                            <i class="far fa-clipboard"></i>
+                                            <div class="header-right-text">Đăng ký</div>
+                                        </a>
+                                        <a class="header-top-right" href="@Url.Action("Login","Account")">
+                                            <i class="fas fa-user-circle"></i>
+                                            <div class="header-right-text">Đăng nhập</div>
+                                        </a>
+                                    }
+
+                                    <a class="header-top-right" href="">
+                                        <i class="fas fa-piggy-bank"></i>
+                                        <div class="header-right-text">Khuyến mãi</div>
+                                    </a>
+                                    <a class="header-top-right" href="~/User/CartItems/Index">
+                                        <div class="icon-has-notice">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span class="cart-notice">0</span>
+                                        </div>
+
+                                        <div class="header-right-text">Giỏ hàng</div>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="account">
-                                @if (Session["UserID"] != null)
-                                {
-                                    <a class="header-top-right" href="~/User/OrderItems/Index">
-                                        <i class="fas fa-user-circle"></i>
-                                        <div class="header-right-text">Chào, @Session["UserName"]</div>
-                                    </a>
-                                    <a class="header-top-right" href="@Url.Action("Logout","Account")">
-                                        <i class="fas fa-sign-out-alt"></i>
-                                        <div class="header-right-text">Đăng xuất</div>
-                                    </a>
-                                }
-                                else
-                                {
-                                    <a class="header-top-right" href="@Url.Action("Register","Account")">
-                                        <i class="far fa-clipboard"></i>
-                                        <div class="header-right-text">Đăng ký</div>
-                                    </a>
-                                    <a class="header-top-right" href="@Url.Action("Login","Account")">
-                                        <i class="fas fa-user-circle"></i>
-                                        <div class="header-right-text">Đăng nhập</div>
-                                    </a>
-                                }
-
-                                <a class="header-top-right" href="">
-                                    <i class="fas fa-piggy-bank"></i>
-                                    <div class="header-right-text">Khuyến mãi</div>
-                                </a>
-                                <a class="header-top-right" href="~/User/CartItems/Index">
-                                    <div class="icon-has-notice">
-                                        <i class="fas fa-shopping-cart"></i>
-                                        <span class="cart-notice">0</span>
-                                    </div>
-
-                                    <div class="header-right-text">Giỏ hàng</div>
-                                </a>
-                            </div>
-                        </div>
+                        </form>
                         <div class="bot-header">
                             <ul class="info">
                                 <li>

@@ -52,6 +52,10 @@ namespace ComputerStore.Areas.User.Controllers
         [HttpPost]
         public ActionResult AddToCart(int productId, int quantity)
         {
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Login", "Account"); // Chuyển hướng đến trang Login
+            }
             int userId = (int)Session["UserID"];
 
 
@@ -116,6 +120,9 @@ namespace ComputerStore.Areas.User.Controllers
             return RedirectToAction("Index", "Cart");
         }
 
-
+        public ActionResult ThanhToan()
+        {
+            return View();
+        }
     }
 }

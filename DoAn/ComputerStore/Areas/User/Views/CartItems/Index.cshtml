@@ -274,7 +274,7 @@
                                                 <div class="card-body pt-3">
                                                     <div class="list-group voucher">
                                                         <div class="list-group-item d-flex flex-row gap-2 voucher-info">
-                                                            <img style="height: 200px" src="~/assets_user/image/NHD-Images/445098-PEZ3SE-119.jpg" alt="Voucher Image" />
+                                                            <img style="height: 170px; width: 150px" src="~/assets_user/image/NHD-Images/445098-PEZ3SE-119.jpg" alt="Voucher Image" />
                                                             <div class="d-flex flex-column gap-2">
                                                                 <div>
                                                                     <h6 class="m-font-size-12">Giảm 30.000₫</h6>
@@ -290,7 +290,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="list-group-item d-flex flex-row gap-2 voucher-info">
-                                                            <img style="height: 200px" src="~/assets_user/image/NHD-Images/445098-PEZ3SE-119.jpg" alt="Voucher Image" />
+                                                            <img style="height: 170px; width: 150px" src="~/assets_user/image/NHD-Images/445098-PEZ3SE-119.jpg" alt="Voucher Image" />
                                                             <div class="d-flex flex-column gap-2">
                                                                 <div>
                                                                     <h6 class="m-font-size-12">Giảm 100.000₫</h6>
@@ -306,7 +306,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="list-group-item d-flex flex-row gap-2 voucher-info">
-                                                            <img style="height: 200px" src="~/assets_user/image/NHD-Images/445098-PEZ3SE-119.jpg" alt="Voucher Image" />
+                                                            <img style="height: 170px; width: 150px" src="~/assets_user/image/NHD-Images/445098-PEZ3SE-119.jpg" alt="Voucher Image" />
                                                             <div class="d-flex flex-column gap-2">
                                                                 <div>
                                                                     <h6 class="m-font-size-12">Giảm 100.000₫</h6>
@@ -333,6 +333,26 @@
                                 </div>
                             </div><!-- End Basic Modal-->
 
+                        </div>
+                        <hr />
+                        <div class="summary-item gap-3">
+                            <h6>Phương thức thanh toán</h6>
+                            <fieldset class="row  w-25">
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios2" id="gridRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                            Thanh toán khi nhận hàng
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios2" id="gridRadios2" value="option2">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            Ví VN Pay <!--Check, nếu cbb này true thì sẽ gọi VN Pay, không thì chuyển tới trang quản lý đơn hàng-->
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
                         </div>
                         <hr />
                         <div class="summary-item gap-3">
@@ -369,7 +389,8 @@
                 alert(result.message);
                 console.log("Phản hồi thành công:", result);
                 // Redirect hoặc reload
-                location.href = "/Order/Success";
+                location.href = "../OrderItems/Index";
+
             } else {
                 alert(result.message);
                 console.log("Phản hồi lỗi từ server:", result);

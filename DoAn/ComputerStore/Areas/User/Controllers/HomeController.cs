@@ -25,7 +25,14 @@ namespace ComputerStore.Areas.User.Controllers
             public List<ProductDetailDto> PhoneDetailsList { get; set; }
             public List<ProductDetailDto> ScreenDetailsList { get; set; }
         }
-
+        public class ProductSearchViewModel
+        {
+            public int ProductID { get; set; }
+            public string ProductName { get; set; }
+            public decimal Price { get; set; }
+            public string Image1 { get; set; }
+            public string SpecificationValue { get; set; }
+        }
 
         public ActionResult Index()
         {
@@ -103,26 +110,24 @@ namespace ComputerStore.Areas.User.Controllers
         {
             if (string.IsNullOrEmpty(searchTerm))
             {
-                // Trả về tất cả sản phẩm nếu không có từ khóa tìm kiếm
-                var productss = db.Products.ToList();
-                return View(productss);
+                return View(new List<ProductSearchViewModel>()); // Trả về danh sách rỗng
             }
 
-            // Tìm kiếm theo SpecificationValue và ProductName
             var products = (from pd in db.ProductDetails
                             join p in db.Products on pd.ProductID equals p.ProductID
-                            where (SqlFunctions.PatIndex("%" + searchTerm + "%", pd.SpecificationValue) > 0 || p.ProductName.Contains(searchTerm))
-                            select new
+                            where pd.SpecificationValue != null &&
+                                  (pd.SpecificationValue.Contains(searchTerm) || p.ProductName.Contains(searchTerm))
+                            select new ProductSearchViewModel
                             {
-                                p.ProductID,
-                                p.ProductName,
+                                ProductID = p.ProductID,
+                                ProductName = p.ProductName,
+                                Price = p.Price,
+                                Image1 = p.Image1,
                                 SpecificationValue = pd.SpecificationValue
-                            }).Distinct().ToList();
+                            }).ToList();
+
 
             return View(products);
         }
-
-
-
     }
 }

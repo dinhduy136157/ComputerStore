@@ -687,6 +687,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Icon.ico" />
     <Content Include="Models\DbContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DbContext.Context.cs</LastGenOutput>
@@ -839,6 +840,7 @@
     <Content Include="Areas\User\Views\OrderItems\AddressList.cshtml" />
     <Content Include="Areas\User\Views\OrderItems\OrderedItems.cshtml" />
     <Content Include="Areas\User\Views\Home\Search.cshtml" />
+    <Content Include="Areas\User\Views\CartItems\ThanhToan.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

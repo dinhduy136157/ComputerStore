@@ -1,5 +1,4 @@
-﻿@model IEnumerable<ComputerStore.Models.ProductDetail>
-
+﻿@model IEnumerable<ComputerStore.Areas.User.Controllers.HomeController.ProductSearchViewModel>
 @{
     Layout = "~/Areas/User/Views/Shared/_LayoutUser.cshtml";
 }
@@ -35,12 +34,16 @@
                     </a>
                 </div>
                 <div id="product2" class="product-list">
-                    @foreach (var item in Model)
+                    @if (!Model.Any())
+                    {
+                        <p>Không tìm thấy sản phẩm nào phù hợp với từ khóa.</p>
+                    }
+                    @foreach (var item in Model.GroupBy(p => p.ProductID).Select(g => g.First()))
                     {
                         <div class="product-item">
                             <a href="../ProductDetails/Index/@item.ProductID" class="product-link" id="product-link">
                                 <div class="product-img">
-                                    <img src="~/assets_user/image/data-image/@item.Product.Image1" alt="">
+                                    <img src="~/assets_user/image/data-image/@item.Image1" alt="">
                                     <div class="add-to-cart">
                                         <div class="add-content">
                                             <span class="view-detail">Click để xem chi tiết</span>
@@ -49,13 +52,13 @@
                                     </div>
                                 </div>
                                 <h2 class="product-name">
-                                    @item.Product.ProductName
+                                    @item.ProductName
                                 </h2>
                             </a>
                             <div class="product-about-price">
                                 <div class="product-price">
                                     <p class="original-price">20,420,000₫</p>
-                                    <p class="new-price">@item.Product.Price.ToString("N0")</p>
+                                    <p class="new-price">@item.Price.ToString("N0")</p>
                                 </div>
                                 <div class="product-sale-off">
                                     -5%

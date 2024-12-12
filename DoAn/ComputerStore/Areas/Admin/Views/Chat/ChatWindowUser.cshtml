@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Chat với Admin";
+}
+<style>
+    #chat {
+        max-height: 400px;
+        overflow-y: scroll;
+        margin-bottom: 20px;
+    }
+
+    .message {
+        margin: 10px 0;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        margin-top: 10px;
+    }
+
+</style>
+<h2>Chat với Admin</h2>
+
+<div id="chat">
+    @foreach (var message in ViewBag.Messages)
+    {
+        <div class="message">
+            <strong>@(message.SenderID == ViewBag.SessionID ? "Bạn" : "Admin"):</strong>
+            <p>@message.MessageText</p>
+            <span>@message.Timestamp</span>
+        </div>
+    }
+</div>
+
+<form action="@Url.Action("SendMessage", "Chat")" method="post">
+    <input type="hidden" name="sessionId" value="@ViewBag.SessionID" />
+    <input type="hidden" name="senderId" value="@ViewBag.SessionID" />
+    <textarea name="messageText" required></textarea>
+    <button type="submit">Gửi</button>
+</form>
