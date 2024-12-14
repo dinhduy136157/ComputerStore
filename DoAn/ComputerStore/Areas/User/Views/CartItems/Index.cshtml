@@ -371,35 +371,41 @@
     </div>
 <script>
     document.getElementById("placeOrderBtn").addEventListener("click", async function () {
-        try {
-            console.log("Gửi yêu cầu đến server...");
+        const paymentMethod = document.querySelector('input[name="gridRadios2"]:checked').value;
 
+        if (paymentMethod === "option1") {
+            // Xử lý thanh toán tiền mặt
             const response = await fetch('/User/OrderItems/CreateOrderWithItems', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                }
+                headers: { 'Content-Type': 'application/json' }
             });
-
-            console.log("Đã nhận phản hồi từ server...");
 
             const result = await response.json();
 
             if (result.success) {
                 alert(result.message);
-                console.log("Phản hồi thành công:", result);
-                // Redirect hoặc reload
                 location.href = "../OrderItems/Index";
-
             } else {
                 alert(result.message);
-                console.log("Phản hồi lỗi từ server:", result);
             }
-        } catch (error) {
-            console.error("Lỗi bắt được:", error);
-            alert("Có lỗi xảy ra khi xử lý đặt hàng. Vui lòng thử lại.");
+        } else if (paymentMethod === "option2") {
+            // Xử lý thanh toán qua VNPay
+            const response = await fetch('/User/CartItems/ThanhToan', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                window.location.href = result.paymentUrl;
+            } else {
+                alert(result.message);
+            }
         }
     });
+
+
 
 </script>
     <!--#region Script-->

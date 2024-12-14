@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -21,7 +22,7 @@ namespace ComputerStore.Areas.Admin.Controllers
             return View(productDetails.ToList());
         }
 
-
+        // GET: Admin/ProductDetails/Create
         public ActionResult Create()
         {
             // Lấy danh sách các Category từ bảng Categories
@@ -29,15 +30,31 @@ namespace ComputerStore.Areas.Admin.Controllers
             return View();
         }
 
+        // POST: Admin/ProductDetails/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Product product)
+        public ActionResult Create(Product product, HttpPostedFileBase Image1)
         {
             if (ModelState.IsValid)
             {
+                // Kiểm tra xem có file ảnh không
+                if (Image1 != null && Image1.ContentLength > 0)
+                {
+                    // Tạo tên file duy nhất
+                    var fileName = Path.GetFileName(Image1.FileName);
+                    var path = Path.Combine(Server.MapPath("~/Images/Products"), fileName);
+
+                    // Lưu file vào thư mục
+                    Image1.SaveAs(path);
+
+                    // Gán đường dẫn file vào thuộc tính Image1
+                    product.Image1 = "~/Images/Products/" + fileName;
+                }
+
                 // Lưu sản phẩm mới vào bảng Products
                 db.Products.Add(product);
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 
@@ -46,8 +63,6 @@ namespace ComputerStore.Areas.Admin.Controllers
             return View(product);
         }
 
-
-
         // GET: Admin/ProductDetails/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -55,7 +70,8 @@ namespace ComputerStore.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ProductDetail productDetail = db.ProductDetails.Find(id);
+            var productDetail = db.ProductDetails.FirstOrDefault(pd => pd.ProductID == id);
+
             if (productDetail == null)
             {
                 return HttpNotFound();
@@ -66,8 +82,6 @@ namespace ComputerStore.Areas.Admin.Controllers
         }
 
         // POST: Admin/ProductDetails/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ProductID,SpecificationID,SpecificationValue")] ProductDetail productDetail)
@@ -81,32 +95,6 @@ namespace ComputerStore.Areas.Admin.Controllers
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName", productDetail.ProductID);
             ViewBag.SpecificationID = new SelectList(db.ProductSpecifications, "SpecificationID", "SpecificationName", productDetail.SpecificationID);
             return View(productDetail);
-        }
-
-        // GET: Admin/ProductDetails/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            ProductDetail productDetail = db.ProductDetails.Find(id);
-            if (productDetail == null)
-            {
-                return HttpNotFound();
-            }
-            return View(productDetail);
-        }
-
-        // POST: Admin/ProductDetails/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            ProductDetail productDetail = db.ProductDetails.Find(id);
-            db.ProductDetails.Remove(productDetail);
-            db.SaveChanges();
-            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)

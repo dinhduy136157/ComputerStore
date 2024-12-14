@@ -22,6 +22,8 @@ namespace ComputerStore.Areas.Admin.Controllers
         }
 
         // GET: Admin/OrderItems/Delete/5
+        [HttpGet]
+
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -29,24 +31,10 @@ namespace ComputerStore.Areas.Admin.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             OrderItem orderItem = db.OrderItems.Find(id);
-            if (orderItem == null)
-            {
-                return HttpNotFound();
-            }
-            return View(orderItem);
-        }
-
-        // POST: Admin/OrderItems/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            OrderItem orderItem = db.OrderItems.Find(id);
             db.OrderItems.Remove(orderItem);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)

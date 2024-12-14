@@ -8,7 +8,7 @@
     <div class="content">
         <h2>Thêm sản phẩm mới</h2>
 
-        @using (Html.BeginForm())
+        @using (Html.BeginForm("Create", "ProductDetails", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             @Html.AntiForgeryToken()
 
@@ -67,6 +67,15 @@
                     </div>
                 </div>
 
+                <!-- Thêm trường tải ảnh -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Image1, "Hình ảnh sản phẩm", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="file" name="Image1" id="Image1" class="dropify" />
+                        @Html.ValidationMessageFor(model => model.Image1, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
                 <!-- Submit -->
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
@@ -75,12 +84,7 @@
                 </div>
             </div>
         }
-
-        <div>
-            @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-secondary" })
-        </div>
     </div>
-</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>

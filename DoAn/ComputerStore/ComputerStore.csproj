@@ -253,6 +253,7 @@
     <Compile Include="Areas\User\Controllers\OrderItemsController.cs" />
     <Compile Include="Areas\User\Controllers\ProductDetailsController.cs" />
     <Compile Include="Areas\User\Controllers\TestProductDetailsController.cs" />
+    <Compile Include="Areas\User\Helpers\VnpayHelpers.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

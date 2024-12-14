@@ -64,7 +64,7 @@
                                                 @Html.DisplayFor(modelItem => item.Order.User.UserName)
                                             </td>
                                             <td>
-                                                <image style="height: 120px" src="~/Sources/@Html.DisplayFor(modelItem => item.Product.Image1)"></image>
+                                                <image style="height: 120px" src="~/assets_user/image/data-image/@Html.DisplayFor(modelItem => item.Product.Image1)"></image>
                                             </td>
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.Product.ProductName)
@@ -97,7 +97,7 @@
                                             </td>
 
                                             <td>
-                                                @Html.ActionLink("delete", "delete", new { id = item.OrderItemID })
+                                                @Html.ActionLink("Xóa", "Delete", new { id = item.OrderItemID })
                                             </td>
                                             <td>
                                             </td>

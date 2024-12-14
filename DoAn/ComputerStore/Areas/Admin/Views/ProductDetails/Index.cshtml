@@ -7,7 +7,6 @@
 
 <h2>Index</h2>
 
-
 <div class="content-page">
     <div class="content">
 
@@ -84,9 +83,13 @@
                                                 @Html.DisplayFor(modelItem => item.Product.Price)
                                             </td>
                                             <td>
-                                                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
-                                                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+                                                <button type="button" class="btn btn-success waves-effect waves-light">
+                                                    @Html.ActionLink("Sửa", "Edit", new { id = item.ProductID }, new { @style = "color: white; text-decoration: none;" })
+                                                </button>
                                             </td>
+
+
+
                                             <td></td>
                                         </tr>
                                     }

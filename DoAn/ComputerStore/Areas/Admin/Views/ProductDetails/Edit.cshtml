@@ -1,40 +1,63 @@
 ﻿@model ComputerStore.Models.ProductDetail
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Product Detail";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Edit</h2>
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>ProductDetail</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.ProductID)
-
-        @Html.HiddenFor(model => model.SpecificationID)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.SpecificationValue, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SpecificationValue, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SpecificationValue, "", new { @class = "text-danger" })
+<div class="content-page">
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Minton</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Products</a></li>
+                                <li class="breadcrumb-item active">Edit Product Detail</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">Edit Product Detail</h4>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Edit Product Detail</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <!-- Hidden fields for ProductID and SpecificationID -->
+                    @Html.HiddenFor(model => model.ProductID)
+                    @Html.HiddenFor(model => model.SpecificationID)
+
+                    <!-- Specification Name -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.SpecificationValue, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.SpecificationValue, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.SpecificationValue, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Save Button -->
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- Back to List -->
+            <div>
+                @Html.ActionLink("Back to List", "Index", new { area = "Admin" })
             </div>
-        </div>
-    </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+        </div> <!-- container -->
+    </div> <!-- content -->
 </div>
