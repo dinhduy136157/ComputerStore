@@ -332,6 +332,7 @@
     <Content Include="assets_user\image\NHD-Images\445098-PEZ3SE-119.jpg" />
     <Content Include="assets_user\image\NHD-Images\logo-gearvn.png" />
     <Content Include="assets_user\image\NHD-Images\pc-2.png" />
+    <Content Include="assets_user\NHD-js\preview-image.js" />
     <Content Include="assets_user\NHD-js\quantity-check.js" />
     <Content Include="assets_user\NHD-js\shipping-info.js" />
     <Content Include="assets_user\NiceAdmin\NiceAdmin\assets\css\style.css" />

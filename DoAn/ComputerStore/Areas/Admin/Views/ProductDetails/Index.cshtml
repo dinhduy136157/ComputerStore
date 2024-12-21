@@ -1,8 +1,10 @@
-﻿@model IEnumerable<ComputerStore.Models.ProductDetail>
+﻿@model List<ComputerStore.Areas.Admin.Controllers.ProductEditViewModel>
+
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    string imgPath = "~/assets_user/image/data-image/";
 }
 
 <h2>Index</h2>
@@ -22,10 +24,10 @@
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Minton</a></li>
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                                <li class="breadcrumb-item active">Quản lý đơn hàng</li>
+                                <li class="breadcrumb-item active">Quản lý sản phẩm</li>
                             </ol>
                         </div>
-                        <h4 class="page-title">Quản lý đơn hàng</h4>
+                        <h4 class="page-title">Quản lý sản phẩm</h4>
                     </div>
                 </div>
             </div>
@@ -37,7 +39,7 @@
                             <p>
                                 @Html.ActionLink("Thêm bảng", "Create")
                             </p>
-                            <h4 class="header-title">Danh sách đơn hàng</h4>
+                            <h4 class="header-title">Danh sách sản phẩm</h4>
                             <table id="datatable-buttons" class="table table-striped dt-responsive nowrap">
                                 <thead>
                                     <tr>
@@ -53,46 +55,42 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach (var item in Model.GroupBy(p => p.ProductID).Select(g => g.First()))
+                                    @foreach (var item in Model)
                                     {
                                         <tr>
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.ProductID)
                                             </td>
                                             <td>
-
-                                                <image style="height: 120px" src="~/assets_user/image/data-image/@Html.DisplayFor(modelItem => item.Product.Image1)"></image>
-
+                                                <img style="height: 120px" src="@Url.Content(imgPath + item.Image1)" />
+                                                @*<p>@Url.Content(imgPath+item.Image1)</p>*@
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.Product.ProductName)
+                                                @Html.DisplayFor(modelItem => item.ProductName)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.Product.Category.CategoryName)
+                                                @Html.DisplayFor(modelItem => item.CategoryName)
                                             </td>
                                             <td>
-                                                @Html.Raw(string.Join("<br>", Model
-                                                    .Where(d => d.ProductID == item.ProductID)
-                                                    .Select(d => $"{d.ProductSpecification.SpecificationName}: {d.SpecificationValue}")))
+                                                @Html.Raw(string.Join("<br>", item.Specifications
+                                                    .Select(spec => $"{spec.SpecificationName}: {spec.SpecificationValue}")))
                                             </td>
                                             <td>
-                                                @Html.Raw(string.Join("<br>", Enumerable.Range(0, (item.Product.Description.Length + 49) / 50)
-                                                    .Select(i => item.Product.Description.Substring(i * 50, Math.Min(50, item.Product.Description.Length - i * 50)))))
+                                                @Html.Raw(string.Join("<br>", Enumerable.Range(0, (item.Description.Length + 49) / 50)
+                                                    .Select(i => item.Description.Substring(i * 50, Math.Min(50, item.Description.Length - i * 50)))))
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.Product.Price)
+                                                @Html.DisplayFor(modelItem => item.Price)
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-success waves-effect waves-light">
                                                     @Html.ActionLink("Sửa", "Edit", new { id = item.ProductID }, new { @style = "color: white; text-decoration: none;" })
                                                 </button>
                                             </td>
-
-
-
                                             <td></td>
                                         </tr>
                                     }
+
                                 </tbody>
 
                             </table>

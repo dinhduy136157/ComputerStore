@@ -1,8 +1,12 @@
-﻿@model ComputerStore.Models.ProductDetail
+﻿@model ComputerStore.Areas.Admin.Controllers.ProductEditViewModel
+@*nếu tổ chức lại class viewmodel thì đổi đường dẫn model ở đây*@
 
 @{
     ViewBag.Title = "Edit Product Detail";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+
+    string imgPath = "~/assets_user/image/data-image/";
+
 }
 
 <div class="content-page">
@@ -23,41 +27,99 @@
                 </div>
             </div>
 
-            @using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
+            <div>
 
-                <div class="form-horizontal">
-                    <h4>Edit Product Detail</h4>
-                    <hr />
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @using (Html.BeginForm("Edit", "ProductDetails", new { area = "Admin" }, FormMethod.Post, new { enctype = "multipart/form-data", @class = "" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger h3" })
 
-                    <!-- Hidden fields for ProductID and SpecificationID -->
-                    @Html.HiddenFor(model => model.ProductID)
-                    @Html.HiddenFor(model => model.SpecificationID)
 
-                    <!-- Specification Name -->
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.SpecificationValue, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.SpecificationValue, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.SpecificationValue, "", new { @class = "text-danger" })
-                        </div>
+                    <h1>Chỉnh sửa sản phẩm</h1>
+
+                    <input type="hidden" name="ProductID" value="@Model.ProductID" />
+
+                    <div class="mb-3">
+                        <label class="form-label">Tên sản phẩm</label>
+                        <input class="form-control" type="text" name="ProductName" value="@Model.ProductName" />
                     </div>
 
-                    <!-- Save Button -->
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Save" class="btn btn-primary" />
-                        </div>
+                    <div class="mb-3">
+                        <label class="form-label">Giá</label>
+                        <input class="form-control" type="number" name="Price" value="@Model.Price" />
                     </div>
-                </div>
-            }
+
+                    <div class="mb-3">
+                        <label class="form-label">Số lượng</label>
+                        <input class="form-control" type="number" name="Quantity" value="@Model.Quantity" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Mô tả</label>
+                        <textarea class="form-control" rows="5" name="Description">@Model.Description</textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Danh mục</label>
+                        <input type="hidden" name="CategoryID" value="@Model.CategoryID" />
+                        <input class="form-control" type="text" value="@Model.CategoryName" readonly />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Ảnh</label>
+                        <input type="file" id="imgFile1" name="ProductImage1" class="form-control" accept="image/*"
+                               onchange="previewSingleImage(event, 'ImagePreview1')" />
+                        <img id="ImagePreview1" width="200" class="img-thumbnail" alt="product-image"
+                             src="@Url.Content(imgPath+Model.Image1)" />
+
+                        <input type="file" id="imgFile2" name="ProductImage2" class="form-control" accept="image/*"
+                               onchange="previewSingleImage(event, 'ImagePreview2')" />
+                        <img id="ImagePreview2" width="200" class="img-thumbnail" alt="product-image"
+                             src="@Url.Content(imgPath+Model.Image2)" />
+                    </div>
+
+
+
+
+                    <h3>Thông số kỹ thuật</h3>
+
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tên thông số</th>
+                                <th>Giá trị</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+
+                                for (int i = 0; i < Model.Specifications.Count; i++)
+                                {
+                                    <tr>
+                                        <td>@Model.Specifications[i].SpecificationName</td>
+                                        <td>
+                                            <input type="hidden" name="Specifications[@i].SpecificationID" value="@Model.Specifications[i].SpecificationID" />
+                                            <input class="form-control" type="text" name="Specifications[@i].SpecificationValue" value="@Model.Specifications[i].SpecificationValue" />
+                                        </td>
+                                    </tr>
+                                }
+
+                            }
+                        </tbody>
+                    </table>
+
+
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                }
+
+            </div>
 
             <!-- Back to List -->
-            <div>
-                @Html.ActionLink("Back to List", "Index", new { area = "Admin" })
+            <div class="btn btn-outline-secondary mt-4">
+                @Html.ActionLink("Về danh sách", "Index", new { area = "Admin" })
             </div>
         </div> <!-- container -->
     </div> <!-- content -->
 </div>
+<script src="~/assets_user/NHD-js/preview-image.js"></script>
