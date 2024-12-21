@@ -16,9 +16,15 @@ namespace ComputerStore.Areas.Admin.Controllers
             public List<CategoryCount> CategoryCounts { get; set; }
             public int totalStatusOrderCount { get; set; }
             public int totalCategoryOrderCount { get; set; }
+            public List<MonthlyStatistics> MonthlyStatistics { get; set; } // Thêm danh sách theo tháng
 
         }
-
+        public class MonthlyStatistics
+        {
+            public int Month { get; set; }
+            public int TotalQuantitySold { get; set; }
+            public decimal TotalRevenue { get; set; }
+        }
         public class StatusCount
         {
             public string Status { get; set; }
@@ -34,6 +40,10 @@ namespace ComputerStore.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
             // Truy vấn thống kê theo Status
             var statusCounts = db.OrderItems
                 .Where(o => o.Status == "Đang chờ xác nhận" ||
@@ -60,17 +70,35 @@ namespace ComputerStore.Areas.Admin.Controllers
                                   }).ToList();
             var totalStatusOrderCount = statusCounts.Sum(s => s.OrderCount);
             var totalCategoryOrderCount = categoryCounts.Sum(s => s.OrderCount);
-            // Gán dữ liệu vào ViewModel
+
+
+
+            var query = from o in db.Orders
+                        join oi in db.OrderItems on o.OrderID equals oi.OrderID
+                        where o.OrderDate.Year == 2024
+                        group new { oi.Quantity, oi.Price } by o.OrderDate.Month into g
+                        orderby g.Key
+                        select new MonthlyStatistics
+                        {
+                            Month = g.Key,
+                            TotalQuantitySold = g.Sum(x => x.Quantity), // Tổng số lượng bán
+                            TotalRevenue = g.Sum(x => x.Quantity * x.Price) // Tổng doanh thu
+                        };
+
+            var monthlyData = query.ToList(); // Lấy danh sách dữ liệu theo từng tháng
+
+
             var viewModel = new DashboardViewModel
             {
-                StatusCounts = statusCounts,
-                CategoryCounts = categoryCounts,
-                totalStatusOrderCount = totalStatusOrderCount,
-                totalCategoryOrderCount = totalCategoryOrderCount
+                StatusCounts = statusCounts, // Dữ liệu khác bạn đã có
+                CategoryCounts = categoryCounts, // Dữ liệu khác bạn đã có
+                totalStatusOrderCount = totalStatusOrderCount, // Dữ liệu khác bạn đã có
+                totalCategoryOrderCount = totalCategoryOrderCount, // Dữ liệu khác bạn đã có
+                MonthlyStatistics = monthlyData // Gán danh sách theo tháng
             };
-            
 
             return View(viewModel);
+
         }
 
 

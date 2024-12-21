@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.IO;
 using System.Linq;
@@ -18,6 +16,10 @@ namespace ComputerStore.Areas.Admin.Controllers
         // GET: Admin/ProductDetails
         public ActionResult Index()
         {
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
             var productDetails = db.ProductDetails.Include(p => p.Product).Include(p => p.Product.Category).Include(p => p.ProductSpecification);
             return View(productDetails.ToList());
         }
@@ -40,22 +42,47 @@ namespace ComputerStore.Areas.Admin.Controllers
                 // Kiểm tra xem có file ảnh không
                 if (Image1 != null && Image1.ContentLength > 0)
                 {
-                    // Tạo tên file duy nhất
-                    var fileName = Path.GetFileName(Image1.FileName);
-                    var path = Path.Combine(Server.MapPath("~/Images/Products"), fileName);
+                    try
+                    {
+                        // Tạo tên file duy nhất
+                        var fileName = Path.GetFileName(Image1.FileName);
+                        var path = Path.Combine(Server.MapPath("~/Images/Products"), fileName);
 
-                    // Lưu file vào thư mục
-                    Image1.SaveAs(path);
+                        // Kiểm tra nếu thư mục không tồn tại thì tạo mới
+                        var directory = Path.GetDirectoryName(path);
+                        if (!Directory.Exists(directory))
+                        {
+                            Directory.CreateDirectory(directory);
+                        }
 
-                    // Gán đường dẫn file vào thuộc tính Image1
-                    product.Image1 = "~/Images/Products/" + fileName;
+                        // Lưu file vào thư mục
+                        Image1.SaveAs(path);
+
+                        // Gán đường dẫn file vào thuộc tính Image1
+                        product.Image1 = "~/Images/Products/" + fileName;
+                    }
+                    catch (Exception ex)
+                    {
+                        // Xử lý lỗi khi tải ảnh
+                        ModelState.AddModelError("", "Lỗi khi tải ảnh: " + ex.Message);
+                        return View(product);
+                    }
                 }
 
-                // Lưu sản phẩm mới vào bảng Products
-                db.Products.Add(product);
-                db.SaveChanges();
+                try
+                {
+                    // Lưu sản phẩm mới vào bảng Products
+                    db.Products.Add(product);
+                    db.SaveChanges();
 
-                return RedirectToAction("Index");
+                    // Chuyển hướng về trang danh sách sản phẩm
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý lỗi khi lưu sản phẩm
+                    ModelState.AddModelError("", "Lỗi khi lưu sản phẩm: " + ex.Message);
+                }
             }
 
             // Truyền lại danh sách Categories nếu lưu thất bại
@@ -76,6 +103,8 @@ namespace ComputerStore.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
+
+            // Truyền các dữ liệu cần thiết cho View
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName", productDetail.ProductID);
             ViewBag.SpecificationID = new SelectList(db.ProductSpecifications, "SpecificationID", "SpecificationName", productDetail.SpecificationID);
             return View(productDetail);
@@ -88,15 +117,24 @@ namespace ComputerStore.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(productDetail).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    db.Entry(productDetail).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý lỗi khi sửa thông tin sản phẩm
+                    ModelState.AddModelError("", "Lỗi khi sửa sản phẩm: " + ex.Message);
+                }
             }
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName", productDetail.ProductID);
             ViewBag.SpecificationID = new SelectList(db.ProductSpecifications, "SpecificationID", "SpecificationName", productDetail.SpecificationID);
             return View(productDetail);
         }
 
+        // Phương thức Dispose để giải phóng tài nguyên
         protected override void Dispose(bool disposing)
         {
             if (disposing)

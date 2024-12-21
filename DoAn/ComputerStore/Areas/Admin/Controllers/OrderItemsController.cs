@@ -17,6 +17,10 @@ namespace ComputerStore.Areas.Admin.Controllers
         // GET: Admin/OrderItems
         public ActionResult Index()
         {
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
             var orderItems = db.OrderItems.Include(o => o.Order).Include(o => o.Product);
             return View(orderItems.ToList());
         }

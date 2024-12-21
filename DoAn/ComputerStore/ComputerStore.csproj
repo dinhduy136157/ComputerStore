@@ -242,6 +242,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\OrderItemsController.cs" />
@@ -255,6 +256,7 @@
     <Compile Include="Areas\User\Controllers\TestProductDetailsController.cs" />
     <Compile Include="Areas\User\Helpers\VnpayHelpers.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
+    <Content Include="assets_admin\js\pages\dashboards-edit.init.js" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -324,6 +326,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets_admin\js\pages\dashboards-1-1.init.js" />
     <Content Include="assets_admin\js\pages\dashboards-1.init.js" />
     <Content Include="assets_user\css\NHD-css.css" />
     <Content Include="assets_user\image\NHD-Images\445098-PEZ3SE-119.jpg" />
@@ -842,6 +845,11 @@
     <Content Include="Areas\User\Views\OrderItems\OrderedItems.cshtml" />
     <Content Include="Areas\User\Views\Home\Search.cshtml" />
     <Content Include="Areas\User\Views\CartItems\ThanhToan.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Index.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

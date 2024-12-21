@@ -12,80 +12,79 @@
         {
             @Html.AntiForgeryToken()
 
-            <div class="form-horizontal">
-                <h4>Sản phẩm</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-horizontal">
+        <h4>Sản phẩm</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-                <!-- Tên sản phẩm -->
-                <div class="form-group">
-                    @Html.LabelFor(model => model.ProductName, "Tên sản phẩm", new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <!-- Giá sản phẩm -->
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Price, "Giá sản phẩm", new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <!-- Số lượng -->
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Quantity, "Số lượng", new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <!-- Thể loại -->
-                <div class="form-group">
-                    @Html.LabelFor(model => model.CategoryID, "Thể loại", new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.DropDownList("CategoryID", null, "Chọn thể loại", new { @class = "form-control", id = "categoryDropdown" })
-                        @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <!-- Dynamic Fields (Hiển thị ngay bên dưới DropDownList) -->
-                <div id="dynamicFields" class="form-group" style="margin-top: 20px;">
-                    <!-- Nội dung sẽ được cập nhật động -->
-                </div>
-
-                <!-- Mô tả -->
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Description, "Mô tả", new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 5 })
-                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <!-- Thêm trường tải ảnh -->
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Image1, "Hình ảnh sản phẩm", new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        <input type="file" name="Image1" id="Image1" class="dropify" />
-                        @Html.ValidationMessageFor(model => model.Image1, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <!-- Submit -->
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Thêm mới" class="btn btn-primary" />
-                    </div>
-                </div>
+        <!-- Tên sản phẩm -->
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductName, "Tên sản phẩm", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
             </div>
+        </div>
+        <!-- Thêm trường tải ảnh -->
+        <div class="form-group">
+            @Html.LabelFor(model => model.Image1, "Hình ảnh sản phẩm", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="Image1" id="Image1" />
+            </div>
+        </div>
+
+        <!-- Giá sản phẩm -->
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, "Giá sản phẩm", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!-- Số lượng -->
+        <div class="form-group">
+            @Html.LabelFor(model => model.Quantity, "Số lượng", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!-- Thể loại -->
+        <div class="form-group">
+            @Html.LabelFor(model => model.CategoryID, "Thể loại", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CategoryID", null, "Chọn thể loại", new { @class = "form-control", id = "categoryDropdown" })
+                @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!-- Dynamic Fields (Hiển thị ngay bên dưới DropDownList) -->
+        <div id="dynamicFields" class="form-group" style="margin-top: 20px;">
+            <!-- Nội dung sẽ được cập nhật động -->
+        </div>
+
+        <!-- Mô tả -->
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, "Mô tả", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 5 })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <!-- Submit -->
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Thêm mới" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
         }
     </div>
-
+</div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function () {

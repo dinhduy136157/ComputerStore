@@ -8,6 +8,14 @@
         var categoryOrderCounts = categoryCounts.map(function (item) {
             return item.OrderCount; // Lấy số lượng OrderCount từ mỗi item
         });
+
+        var totalRevenue = monthlyStatistics.map(function (item) {
+            return item.TotalRevenue;
+        });
+        var totalQuantitySold = monthlyStatistics.map(function (item) {
+            return item.TotalQuantitySold;
+        });
+        console.log(totalRevenue);
         $("#sparkline1").sparkline([110, 23, 43, 35, 44, 45, 56, 37, 40], {
             type: "line",
             width: "100%",
@@ -36,29 +44,29 @@
             spotColor: !1,
             lineWidth: 1
         }), $("#sparkline2").sparkline([
-            [170, 140],
-            [90, 50],
-            [100, 150],
-            [140, 80],
-            [50, 90],
-            [80, 120],
-            [130, 80],
-            [90, 70],
-            [80, 50],
-            [120, 130],
-            [120, 100],
-            [140, 110]
+            [totalQuantitySold[0], totalRevenue[0]],
+            [totalQuantitySold[1], totalRevenue[1]],
+            [totalQuantitySold[2], totalRevenue[2]],
+            [totalQuantitySold[3], totalRevenue[3]],
+            [totalQuantitySold[4], totalRevenue[4]],
+            [totalQuantitySold[5], totalRevenue[5]],
+            [totalQuantitySold[6], totalRevenue[6]],
+            [totalQuantitySold[7], totalRevenue[7]],
+            [totalQuantitySold[8], totalRevenue[8]],
+            [totalQuantitySold[9], totalRevenue[9]],
+            [totalQuantitySold[10], totalRevenue[10]],
+            [totalQuantitySold[11], totalRevenue[11]]
         ], {
             type: "bar",
             height: "210",
             barWidth: "15",
             barSpacing: "3",
-            stackedBarColor: ["#7266ba", "#e3eaef"]
+            stackedBarColor: ["#e3eaef", "#7266ba"]
         }), $("#sparkline3").sparkline([categoryOrderCounts[0], categoryOrderCounts[1], categoryOrderCounts[2], categoryOrderCounts[3]], {
             type: "pie",
             width: "210",
             height: "210",
-            sliceColors: ["#e3eaef", "#7266ba", "#f672a7", "#f672a7"]
+            sliceColors: ["#e3eaef", "#7266ba", "#f672a7", "green"]
         })
     };
     e(), $(window).resize(function (i) {

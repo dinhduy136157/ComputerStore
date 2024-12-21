@@ -8,6 +8,14 @@
         var categoryOrderCounts = categoryCounts.map(function (item) {
             return item.OrderCount; // Lấy số lượng OrderCount từ mỗi item
         });
+
+        var totalRevenue = monthlyStatistics.forEach(function (item) {
+            return item.TotalRevenue;
+        });
+        var totalQuantitySold = monthlyStatistics.forEach(function (item) {
+            return item.Total;
+        });
+
         $("#sparkline1").sparkline([110, 23, 43, 35, 44, 45, 56, 37, 40], {
             type: "line",
             width: "100%",
@@ -37,7 +45,7 @@
             lineWidth: 1
         }), $("#sparkline2").sparkline([
             [170, 140],
-            [90, 50],
+            [190, 50],
             [100, 150],
             [140, 80],
             [50, 90],
